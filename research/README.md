@@ -36,3 +36,11 @@ Every note must include:
 ## Status
 
 Placeholder. No research note has been published yet. Sprint 0 forbids conducting this research; later sprints will collect it.
+
+## Research Plan
+
+A research plan for the APES ecosystem effort — covering scope, methodology, evidence criteria, anti-patterns, deliverables, schedule, and stop conditions — is being maintained as a Draft:
+
+- [`research-plan.md`](research-plan.md) — Draft (v0.1). Defines how research is conducted; it is not itself a research finding.
+
+Execution of the plan (Phases A–D in `research-plan.md` §4.1) is a separate, later sprint.
