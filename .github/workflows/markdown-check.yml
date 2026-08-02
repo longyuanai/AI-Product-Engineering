@@ -1,0 +1,40 @@
+name: Markdown Check
+
+# Status: Draft workflow
+# TODO: Replace the placeholder "Verify Markdown" step with a known, version-pinned
+# Markdown lint action (e.g. DavidAnson/markdownlint-cli2-action) once the maintainers
+# confirm the dependency version they want to use. Do not introduce unverified actions.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-markdown:
+    name: Verify Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify Markdown files exist
+        run: |
+          test -f README.md
+          test -f AGENTS.md
+          test -f CHANGELOG.md
+          test -f ROADMAP.md
+          test -f VISION.md
+          test -f MANIFESTO.md
+          test -f CONTRIBUTING.md
+          test -f CODE_OF_CONDUCT.md
+          test -d docs
+          test -d standards
+          echo "Markdown foundation is in place."
+
+      # TODO: Once the dependency version is confirmed by a maintainer, add a
+      # Markdown lint step here. Do not auto-fix. Comments only.
