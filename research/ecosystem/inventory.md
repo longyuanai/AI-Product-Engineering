@@ -1,7 +1,7 @@
 # research/ecosystem/inventory.md
 
 - Status: Draft
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
 - Last Updated: 2026-08-03
 - Purpose: Descriptive catalog of adjacent artifacts APES might coexist with. Each entry records what the artifact is, where it lives, and which APES lifecycle stage (if any) it nominally touches. No gap analysis, no positioning claims, no APES conclusions.
@@ -16,6 +16,21 @@
 ## Sprint 2.2 Verification Note (2026-08-03)
 
 Per Sprint 2.2 (Primary Source Verification), every priority primary page corresponding to this inventory's items was attempted via direct WebFetch. The access window blocks `arxiv.org`, `github.com`, `agents.md`, `anthropic.com`, `docs.claude.com`, `iso.org`, `csrc.nist.gov`, `owaspsamm.org`, `owasp.org`, `cognitect.com`, and `producttalk.org`. The 22 attempts are recorded in `research/notes/verification-log.md` (VR-001 through VR-022), all with `Outcome: Inaccessible`. No Verification Status in this inventory was upgraded. Per the brief, this is the expected honest outcome under the access window; the Research Gate is `RESEARCH AGAIN`.
+
+## Sprint 2.3 External Verification Reconciliation (2026-08-03)
+
+Six sources were upgraded from `Partially Verified` to `Verified` in `research/source-register.md` based on external-verification evidence (EV-001 through EV-006) supplied by a reviewer with direct primary-source access. The inventory rows below are updated to reflect the new verification status where it changed. The original Sprint 2.2 Inaccessible rows in the verification log are preserved unchanged — they record the Claude-side access barrier, not the external reviewer's success.
+
+The 6 upgrades:
+
+- **SRC-001 (AGENTS.md project page)** → C5 row. Promotion from `Partially Verified` to `Verified`. The 60k+ adoption figure is tagged as project-maintainer-reported.
+- **SRC-003 (NIST SP 800-218 SSDF v1.1)** → C4 and C7 rows. Promotion from `Partially Verified` to `Verified`. SSDF is a security practices framework, not a complete product-engineering standard.
+- **SRC-006 (ISO/IEC/IEEE 12207:2026)** → C7 row. Promotion from `Partially Verified` to `Verified`. Only public metadata and abstract are verified; full text is paywalled.
+- **SRC-015 (OpenAI Codex CLI)** → C6 row. Promotion from `Partially Verified` to `Verified`. License (Apache-2.0), repo existence, official positioning, and active maintenance status are confirmed.
+- **SRC-044 (arXiv 2602.11988)** → C5 row. Promotion from `Partially Verified` to `Verified`. Abstract content verified; method details remain `Partially Verified`.
+- **SRC-045 (arXiv 2601.20404)** → C5 row. Promotion from `Partially Verified` to `Verified`. Not retracted; abstract content verified. Conflicts with SRC-044 are preserved verbatim; APES does not adjudicate.
+
+Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects).
 
 ## Cross-Reference Conventions
 
@@ -89,7 +104,7 @@ Per Sprint 2.2 (Primary Source Verification), every priority primary page corres
 | Continuous Delivery (book) | Jez Humble, David Farley | n.d. (year Unverified) | SRC-049 (related) | Deployment pipeline and lean software delivery | Partially Verified |
 | The Phoenix Project / DevOps Handbook | Gene Kim et al. | n.d. (years Unverified) | SRC-049 (related) | DevOps narrative and process references | Partially Verified |
 | DORA / Accelerate State of DevOps Reports | DORA / Google Cloud | n.d. (annual cadence; specific years Unverified) | SRC-007 | Annual metrics-driven DevOps survey | Partially Verified (dora.dev corroboration) |
-| NIST SSDF (SP 800-218) | NIST | 2022-02 (corroborated via SRC-050) | SRC-003, SRC-050 | Secure software development framework | Partially Verified |
+| NIST SSDF (SP 800-218) | NIST | 2022-02 | SRC-003, SRC-050 | Secure software development framework | Verified (number, version, date, authors, official summary verified externally via EV-006; SSDF is a security practices framework, not a complete product-engineering standard) |
 | OWASP SAMM v2 | OWASP | n.d. (v2.x line) | SRC-004 | Software assurance maturity model | Partially Verified |
 | OWASP ASVS v4 | OWASP | n.d. (v4 line) | SRC-005 | Application security verification standard | Partially Verified |
 
@@ -97,9 +112,9 @@ Per Sprint 2.2 (Primary Source Verification), every priority primary page corres
 
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
-| AGENTS.md convention | Open community (per project page; concrete release date Unverified) | 2025 onward | SRC-001 | Top-level repo guidance file for AI coding agents | Partially Verified (project page corroborated via community summaries; adoption figures are project-maintainer-reported) |
-| arXiv 2602.11988 — Evaluating AGENTS.md (Gloaguen et al.) | Thibaud Gloaguen, Niels Mündler, Mark Müller, Veselin Raychev, Martin Vechev | 2026-02-12 | SRC-044 | Independent empirical evidence: in their evaluation setting, repository-level context files (including AGENTS.md) generally tended to lower task success and increase inference cost. Recommendation: keep only essential constraints. | Partially Verified (canonical arXiv listing cited; full paper not directly fetched) |
-| arXiv 2601.20404 — On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents | Authors per arXiv listing | 2026-01-28 | SRC-045 | Independent empirical evidence: AGENTS.md associated with lower median runtime and lower output-token consumption; task-completion performance was roughly similar. | Partially Verified (canonical arXiv listing cited; full paper not directly fetched). **Conflicts with SRC-044** on direction; APES does not adjudicate. |
+| AGENTS.md convention | Open community (per project page; concrete release date Unverified) | 2025 onward | SRC-001 | Top-level repo guidance file for AI coding agents | Verified (page content and official self-positioning verified externally via EV-001; adoption figure is project-maintainer-reported) |
+| arXiv 2602.11988 — Evaluating AGENTS.md (Gloaguen et al.) | Thibaud Gloaguen, Niels Mündler, Mark Müller, Veselin Raychev, Martin Vechev | 2026-02-12 | SRC-044 | Independent empirical evidence: in their evaluation setting, repository-level context files (including AGENTS.md) generally tended to lower task success and increase inference cost. Recommendation: keep only essential constraints. | Verified (existence, title, authors, dates, abstract content verified externally via EV-003; method details beyond abstract remain `Partially Verified`) |
+| arXiv 2601.20404 — On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents | Jai Lal Lulla, Seyedmoein Mohsenimofidi, Matthias Galster, Jie M. Zhang, Sebastian Baltes, Christoph Treude | 2026-01-28 | SRC-045 | Independent empirical evidence: AGENTS.md associated with lower median runtime and lower output-token consumption; task-completion performance was roughly similar. | Verified (existence, title, authors, dates, abstract content verified externally via EV-004; method details beyond abstract remain `Partially Verified`). **Conflicts with SRC-044** on direction; APES does not adjudicate. |
 | AI agent risk management — NIST AI 600-1 / ISO/IEC 42001 | NIST / ISO | 2024 onward | SRC-006 (ISO) + community corroboration | Standards-aligned AI risk management frameworks | Partially Verified |
 | Anthropic / Claude responsible AI docs | Anthropic | 2024 onward | SRC-014, community sources | Vendor self-published responsible AI guidance | Unverified (vendor page unreachable) |
 
@@ -108,7 +123,7 @@ Per Sprint 2.2 (Primary Source Verification), every priority primary page corres
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
 | Claude Code | Anthropic | n.d. (vendor site unreachable; precise date Unverified) | SRC-014 | Agentic CLI coding agent | Unverified (vendor marketing claim) |
-| OpenAI Codex CLI | OpenAI | n.d. (precise release date Unverified) | SRC-015 | Open-source agentic coding CLI | Partially Verified (repo exists; license Unverified) |
+| OpenAI Codex CLI | OpenAI | n.d. (precise release date Unverified; dynamic dates intentionally not recorded) | SRC-015 | Open-source agentic coding CLI | Verified (repo exists, README positions as terminal coding agent, Apache-2.0 License, active maintenance at access date 2026-08-03 — verified externally via EV-002) |
 | Cursor | Anysphere | n.d. (Cursor 2.0 release date Unverified) | SRC-016 | AI-native IDE | Unverified (vendor marketing claim) |
 | aider | Paul Gauthier (Aider-AI) | n.d. (first-release year Unverified) | SRC-017 | Terminal AI pair-programming tool | Partially Verified (repo exists; license Unverified) |
 | Cline | cline/cline | n.d. (precise rename date Unverified) | SRC-018 | VS Code AI agent extension | Partially Verified (repo exists; license Unverified) |
@@ -124,10 +139,10 @@ Per Sprint 2.2 (Primary Source Verification), every priority primary page corres
 
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
-| NIST SSDF (SP 800-218) | NIST | 2022-02 (corroborated via SRC-050) | SRC-003, SRC-050 | Secure software development practices | Partially Verified |
+| NIST SSDF (SP 800-218) | NIST | 2022-02 | SRC-003, SRC-050 | Secure software development practices | Verified (number, version, date, authors, official summary verified externally via EV-006; SSDF is a security practices framework, not a complete product-engineering standard) |
 | OWASP SAMM v2 | OWASP | n.d. (v2.x line) | SRC-004 | Software assurance maturity model | Partially Verified |
 | OWASP ASVS v4 | OWASP | n.d. (v4 line) | SRC-005 | Application security verification | Partially Verified |
-| ISO/IEC/IEEE 12207:2026 (Edition 2) | ISO / IEC / IEEE | 2026-04 | SRC-006 | Current edition of "Systems and software engineering — Software life cycle processes" | Partially Verified (canonical URL referenced; full text paywalled) |
+| ISO/IEC/IEEE 12207:2026 (Edition 2) | ISO / IEC / IEEE | 2026-04 | SRC-006 | Current edition of "Systems and software engineering — Software life cycle processes" | Verified (number, title, edition, publication date, Published status verified externally via EV-005; full text paywalled; only public metadata and abstract are verified) |
 | ISO/IEC/IEEE 12207:2017 (Edition 1, historical) | ISO / IEC / IEEE | 2017-11 | SRC-052 | Historical edition, superseded by 2026 Edition 2 | Partially Verified (canonical URL referenced; full text paywalled) |
 | DHS/CISA Software Attestation | DHS / CISA | n.d. (precise attestation release date Unverified) | SRC-051 | Federal secure software development attestation guidance | Partially Verified |
 | CISA Secure-by-Design Pledge | CISA | 2024 (community-reported) | SRC-051 (related) | Voluntary industry pledge on secure software development | Partially Verified |
@@ -180,3 +195,4 @@ The following were inspected during Sprint 2 but were excluded from inventory:
 - `research/competitors/candidate-projects.md` — Selected projects advanced to deeper reverse research.
 - `research/research-plan.md` — original research plan that defined this inventory's structure.
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file.
+- `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence).

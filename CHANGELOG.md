@@ -13,6 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added — Sprint 2.3: External Verification Reconciliation (2026-08-03)
+
+- Reconciliation-only sprint. No new research scope, no new sources, no Source ID renumbering, no Coverage Map, Gap Analysis, Positioning Evidence, Feature Matrix, or Lifecycle Coverage Matrix.
+- Six sources upgraded from `Partially Verified` to `Verified` in `research/source-register.md` based on external-verification (EV-###) evidence from an external reviewer with direct primary-source access (2026-08-03): SRC-001 (AGENTS.md, EV-001), SRC-003 (NIST SSDF, EV-006), SRC-006 (ISO/IEC/IEEE 12207:2026, EV-005), SRC-015 (OpenAI Codex CLI, EV-002), SRC-044 (arXiv 2602.11988, EV-003), SRC-045 (arXiv 2601.20404, EV-004).
+- SRC-045 is **not** retracted; existence, title, authors, dates, and abstract content are confirmed by EV-004. Authors: Jai Lal Lulla, Seyedmoein Mohsenimofidi, Matthias Galster, Jie M. Zhang, Sebastian Baltes, Christoph Treude (v1 2026-01-28; v2 2026-03-30).
+- Created `tasks/sprint-02-3-external-verification-reconciliation.md` with full sprint structure (Goal, Inputs, External Evidence Packet, Scope, Out of Scope, Reconciliation Tasks, Statistics Correction, Acceptance Criteria, Verification, Remaining Limitations, Status).
+- Added "External Verification Reconciliation (Sprint 2.3, 2026-08-03)" section to `research/notes/verification-log.md` using the 8-field schema (External Verification ID, Source ID, Canonical URL, Verification Date, Verifier Type, Claims Verified, Remaining Limitations, Outcome). All six EV rows have `Outcome: Verified`.
+- Corrected Sprint 2.2 statistics: `Verification attempts: 22 / Unique verification IDs: 22 / Unique source IDs attempted: 24 / Repeated source IDs: none`. The Attempt count and Source count are distinct reporting dimensions (some VR rows reference multiple Source IDs, e.g., VR-008 covers SRC-008+012+036) and must not be conflated.
+- The 22 Sprint 2.2 Inaccessible verification attempts are **preserved** and remain visible alongside the new External Verification Reconciliation dimension — both reporting dimensions coexist.
+- Recomputed `research/source-register.md` Source Audit Statistics (v0.5): Verified=6, Partially Verified=32, Unverified=14, Contradicted=0, Inaccessible=0 (of the 52 Source IDs).
+- Cross-file backfill in `research/ecosystem/inventory.md` (v0.3), `research/competitors/candidate-projects.md` (v0.3), `research/competitors/reverse-research.md` (v0.3): per-row EV references; Sprint 2.3 reconciliation notes; updated §S-10 identity, §S-10 §11 conflicting approaches (full author lists for both arXiv papers; updated v1/v2 dates), §S-10 §13 verification notes (Sprint 2.3 outcome; SRC-001/044/045 now `Verified`; SRC-045 not retracted).
+- Conflicting empirical evidence between SRC-044 and SRC-045 is preserved verbatim; APES does not adjudicate. The methodological note that "conclusions cannot be generalized to all repositories, models, agents, or tasks; experimental setup must be cited. The 'AGENTS.md is always harmful' generalization is not supported" is added to §S-10 §11.
+- Research Gate remains **`RESEARCH AGAIN`**; Sprint 2 remains **`In Review`**. The 10-condition rule was met for the six sources only because the external reviewer had direct primary-source access; APES itself did not perform the verification and the under-15-Verified threshold is unchanged in spirit.
+- No git commit, push, tag, or branch creation was performed.
+- This CHANGELOG entry.
+
 ### Added — Sprint 2.2: Primary Source Verification (2026-08-03)
 
 - Verification-only sprint. No new research scope, no new sources, no Source ID renumbering.

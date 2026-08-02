@@ -1,10 +1,10 @@
 # research/notes/verification-log.md
 
-- Status: Draft
-- Version: v0.1
+- Status: Draft (post Sprint 2.2 + Sprint 2.3 External Verification Reconciliation)
+- Version: v0.2
 - Owner: APES Maintainers
 - Last Updated: 2026-08-03
-- Purpose: Record every direct primary-source verification attempt made during Sprint 2.2 (Primary Source Verification), with honest Access Result, Evidence Location, and Outcome. Per Sprint 2.2 brief §15: **"若无法直接访问足够原始来源: 不得伪造通过; Sprint 2 保持 In Review; 最终结论输出 RESEARCH AGAIN; 明确列出需要由其他具备网络访问能力的研究者验证的来源."** This file is the record of those attempts.
+- Purpose: Record every direct primary-source verification attempt made during Sprint 2.2 (Primary Source Verification), with honest Access Result, Evidence Location, and Outcome. Per Sprint 2.2 brief §15: **"若无法直接访问足够原始来源: 不得伪造通过; Sprint 2 保持 In Review; 最终结论输出 RESEARCH AGAIN; 明确列出需要由其他具备网络访问能力的研究者验证的来源."** This file is the record of those attempts. Sprint 2.3 adds an External Verification Reconciliation section that records the EV-### entries supplied by an external reviewer with direct primary-source access. The original Sprint 2.2 Inaccessible rows are preserved unchanged.
 
 ## Schema (11 fields per Sprint 2.2 brief §11)
 
@@ -474,10 +474,66 @@ Per Sprint 2.2 brief §15, the following sources require verification by a resea
 - No fabrication: every Access Result is honestly reported. Where the domain was not probed at all (e.g., `svpg.com`, `basecamp.com`, `theleanstartup.com`, `dora.dev`, `sre.google`), the entry records `Not probed in Sprint 2.2` rather than a false `Success`.
 - The `Outcome` column is determined by the brief's 10-condition rule, not by the agent's optimism.
 
-## Cross-References
+---
+
+## External Verification Reconciliation (Sprint 2.3, 2026-08-03)
+
+Sprint 2.3 reconciles six sources via an external verifier with direct primary-source access. The original 22 Sprint 2.2 Inaccessible rows above are preserved verbatim — they record the Claude-side access barrier, not the external reviewer's success. The new section below is the canonical record of the EV-### entries.
+
+### Schema (External Verification, 8 fields per Sprint 2.3 brief §5)
+
+| # | Field | Description |
+|---|---|---|
+| 1 | External Verification ID | `EV-###` identifier (sequential) |
+| 2 | Source ID | `SRC-NNN` from `research/source-register.md` |
+| 3 | Canonical URL | The canonical primary URL that was directly accessed |
+| 4 | Verification Date | `2026-08-03` for every Sprint 2.3 entry |
+| 5 | Verifier Type | `External reviewer with direct primary-source access` |
+| 6 | Claims Verified | The specific factual claims that were verified (1–5 bullets) |
+| 7 | Remaining Limitations | Items that remain `Partially Verified` because the PDF body, full text, or downstream pages were not directly read |
+| 8 | Outcome | `Verified` (claim type + key metadata directly observed) or `Partially Verified` (only metadata/abstract verified, not full body) |
+
+### Reconciliation
+
+| EV-### | Source ID | Canonical URL | Verification Date | Verifier Type | Claims Verified | Remaining Limitations | Outcome |
+|---|---|---|---|---|---|---|---|
+| EV-001 | SRC-001 | https://agents.md/ | 2026-08-03 | External reviewer with direct primary-source access | (1) Page title is `AGENTS.md`. (2) Page defines AGENTS.md as a simple open format for guiding coding agents, framed as a "README for agents". (3) Page describes the format covering build, test, code-style, security, and contribution rules. (4) Page declares adoption by over 60,000 open-source projects (project-maintainer-reported figure — not independently audited). (5) Page describes it as an open format developed via cross-ecosystem collaboration among multiple coding-agent projects. | (a) AAIF governance claim and explicit version/license notice on the homepage still require confirmation; (b) the 60k+ adoption figure is maintainer-reported and is not recorded as independent market share. | Verified |
+| EV-002 | SRC-015 | https://github.com/openai/codex | 2026-08-03 | External reviewer with direct primary-source access | (1) Repository exists at `openai/codex`. (2) README positions it as a coding agent running in the local terminal. (3) Repository contains CLI, Rust implementation, documentation, and SDK directories. (4) Official repository License is Apache-2.0. (5) Repository is actively maintained — numerous commits and releases observed at access date. | Precise Star / Commit / Release counts are intentionally not recorded (these numbers change). Dynamic counters are deliberately omitted from the Source Register. | Verified |
+| EV-003 | SRC-044 | https://arxiv.org/abs/2602.11988 | 2026-08-03 | External reviewer with direct primary-source access | (1) arXiv ID `2602.11988`. (2) Title `Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?`. (3) Authors: Thibaud Gloaguen, Niels Mündler, Mark Müller, Veselin Raychev, Martin Vechev. (4) v1 submitted 2026-02-12; v2 revised 2026-06-23. (5) Abstract-supported core findings: covers SWE-bench tasks and repository problems with developer-submitted context files; context files generally did not improve task success; mean inference cost increased by over 20%; agents typically follow instructions; non-standard engineering requirements may be useful but repository overviews and unnecessary requirements should be used with caution. | (a) Method details and full-text limitations beyond the abstract remain `Partially Verified` (PDF body not directly read). (b) The findings cannot be generalized to all repositories, models, agents, or tasks; experimental setup must be cited. (c) The "AGENTS.md is always harmful" generalization is not supported. | Verified |
+| EV-004 | SRC-045 | https://arxiv.org/abs/2601.20404 | 2026-08-03 | External reviewer with direct primary-source access | (1) arXiv ID `2601.20404`. (2) Title `On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents`. (3) Authors: Jai Lal Lulla, Seyedmoein Mohsenimofidi, Matthias Galster, Jie M. Zhang, Sebastian Baltes, Christoph Treude. (4) v1 submitted 2026-01-28; v2 revised 2026-03-30. (5) Abstract-supported core findings: 10 repositories and 124 Pull Requests analyzed; AGENTS.md associated with lower median runtime; associated with lower output-token consumption; task-completion performance was roughly comparable. | (a) Method details beyond the abstract remain `Partially Verified` (PDF body not directly read). (b) "Correlation" is not automatically "causation". (c) The paper's tasks, models, agents, metrics, and research design differ from SRC-044; results are not directly comparable. | Verified |
+| EV-005 | SRC-006 | https://www.iso.org/standard/90219.html | 2026-08-03 | External reviewer with direct primary-source access | (1) Standard number `ISO/IEC/IEEE 12207:2026`. (2) Title `Systems and software engineering — Software life cycle processes`. (3) Edition 2. (4) Publication date 2026-04. (5) Status: Published. The official ISO page lists the 2017 edition as the previous version. | Full text is paywalled. Only public metadata and abstract are verified. No claim is made about reading or verifying the paywalled full text. | Verified |
+| EV-006 | SRC-003 | https://csrc.nist.gov/pubs/sp/800/218/final | 2026-08-03 | External reviewer with direct primary-source access | (1) Document number `NIST SP 800-218`. (2) Title `Secure Software Development Framework (SSDF) Version 1.1`. (3) Publication date 2022-02. (4) Authors: Murugiah Souppaya, Karen Scarfone, Donna Dodson. (5) Official summary: most SDLCs do not address software security in detail; SSDF provides high-level secure-development practices that can be integrated into any SDLC; goals include reducing published-software vulnerabilities, lowering the impact of exploited vulnerabilities, and addressing root causes. | (a) Full document text not verified line-by-line. (b) SSDF is a security practices framework, not a complete product-engineering standard; description is limited to what the official page exposes. | Verified |
+
+### Sprint 2.2 vs Sprint 2.3 — Verification Attempts vs Source Counts
+
+Per Sprint 2.3 brief §3, the following is the unambiguous statistic for the Sprint 2.2 verification log:
+
+```
+Verification attempts: 22
+Unique verification IDs: 22
+Unique source IDs attempted: 24
+Repeated source IDs: none
+```
+
+The Attempt count (22) and the Source count (24) are not the same number, because some VR rows reference multiple Source IDs (e.g., VR-008 covers SRC-008 + SRC-012 + SRC-036; VR-013 covers SRC-003 + SRC-050; VR-012 covers SRC-013). All 22 VR IDs are unique; no Source ID was attempted twice.
+
+### Notes on Reconciliation
+
+- The 22 Sprint 2.2 Inaccessible rows are **not** edited to reflect Sprint 2.3 outcomes. They record the Claude-side access barrier and remain a true process record.
+- The Sprint 2.3 EV-### entries do not invalidate the Sprint 2.2 statistics. They are a separate reporting dimension: "what Claude could verify directly" vs. "what was verified by an external reviewer with network access."
+- Six sources were upgraded from `Partially Verified` to `Verified` in the Source Register (SRC-001, SRC-003, SRC-006, SRC-015, SRC-044, SRC-045). SRC-045 is **not** retracted; its existence, title, authors, dates, and abstract are confirmed by EV-004.
+- The remaining 14 currently `Unverified` sources and 32 currently `Partially Verified` sources are unchanged by Sprint 2.3 and remain to be verified in a future sprint with broader access.
+
+### Cross-References (Sprint 2.3)
+
+- `research/source-register.md` — the 6 upgraded rows record the EV-### identifier in the Notes column.
+- `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file.
+
+### Cross-References
 
 - `research/source-register.md` — the underlying 52 sources.
 - `research/ecosystem/inventory.md` — descriptive catalog using these sources.
 - `research/competitors/candidate-projects.md` — Selected list.
 - `research/competitors/reverse-research.md` — 10 Selected projects analyzed using the 14-section template.
-- `tasks/sprint-02-2-primary-source-verification.md` — the sprint task file.
+- `tasks/sprint-02-2-primary-source-verification.md` — the Sprint 2.2 task file.
+- `tasks/sprint-02-3-external-verification-reconciliation.md` — the Sprint 2.3 task file.

@@ -1,7 +1,7 @@
 # research/competitors/reverse-research.md
 
 - Status: Draft
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
 - Last Updated: 2026-08-03
 - Purpose: Apply the Core Project Analysis Schema (Appendix E of `research/research-plan.md`) — the 14-section template — to each project on the short list at `research/competitors/candidate-projects.md`. Surface both **confirming** and **contradicting** evidence for any APES-adjacent hypothesis. Do not derive APES positioning, market conclusions, gap claims, or standards here.
@@ -753,6 +753,7 @@ Claude Code is one of multiple agentic CLIs. The presence of AGENTS.md support i
 - Latest Release: n.d.
 - License: Convention; file content per project
 - Sources: SRC-001, SRC-044, SRC-045
+- **Verification (Sprint 2.3):** SRC-001 page content and official self-positioning verified via EV-001 (external reviewer with direct primary-source access). The `agents.md` page is framed as a "README for agents" and describes an open format covering build, test, code-style, security, and contribution rules. The "over 60,000 open-source projects" adoption figure is **project-maintainer-reported** and is not recorded as independent market share.
 
 ### 2. Stated Problem
 
@@ -801,17 +802,19 @@ Treats maintainer-authored content as authoritative.
 
 ### 11. Conflicting or Competing Approaches
 
-Two academic studies (registered as Partially Verified independent empirical evidence) report **conflicting** findings on AGENTS.md's effect:
+Two academic studies (now registered as `Verified` independent empirical evidence at the abstract level via EV-003 and EV-004) report **conflicting** findings on AGENTS.md's effect:
 
-- **SRC-044 — arXiv 2602.11988 (Gloaguen, Mündler, Müller, Raychev, Vechev; 2026-02-12)** — *Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?*
-  - In their evaluation setting, repository-level context files (including AGENTS.md) generally tended to **lower task success and increase inference cost**.
-  - Recommendation: keep only essential constraints; drop verbose guidance.
-  - Limitation: specific to their task set, models, and metrics; does not generalize that AGENTS.md is harmful in all contexts.
+- **SRC-044 — arXiv 2602.11988 (Gloaguen, Mündler, Müller, Raychev, Vechev; 2026-02-12 v1; 2026-06-23 v2)** — *Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?*
+  - Authors: Thibaud Gloaguen, Niels Mündler, Mark Müller, Veselin Raychev, Martin Vechev.
+  - In their evaluation setting, repository-level context files (including AGENTS.md) generally tended to **lower task success and increase inference cost** (mean inference cost increased by over 20%).
+  - Agents typically follow the instructions; non-standard engineering requirements may be useful, but repository overviews and unnecessary requirements should be used with caution.
+  - Limitation: conclusions cannot be generalized to all repositories, models, agents, or tasks; experimental setup must be cited. The "AGENTS.md is always harmful" generalization is not supported.
 
-- **SRC-045 — arXiv 2601.20404 (authors per arXiv listing; 2026-01-28)** — *On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents*
-  - AGENTS.md was associated with **lower median runtime and lower output-token consumption**.
+- **SRC-045 — arXiv 2601.20404 (Lulla, Mohsenimofidi, Galster, Zhang, Baltes, Treude; 2026-01-28 v1; 2026-03-30 v2)** — *On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents*
+  - Authors: Jai Lal Lulla, Seyedmoein Mohsenimofidi, Matthias Galster, Jie M. Zhang, Sebastian Baltes, Christoph Treude.
+  - Analyzed 10 repositories and 124 Pull Requests; AGENTS.md was associated with **lower median runtime and lower output-token consumption**.
   - Task-completion performance was roughly similar to no-AGENTS.md runs.
-  - Limitation: different tasks, metrics, and experimental design from SRC-044; results are not directly comparable.
+  - Limitation: "correlation" is not automatically "causation"; the paper's tasks, models, agents, metrics, and research design differ from SRC-044; results are not directly comparable.
 
 The two studies disagree on direction (one finds harm to task success and cost; the other finds similar task success and lower cost). APES does **not** adjudicate which is "correct" — the conflict is recorded honestly.
 
@@ -822,9 +825,11 @@ The two studies disagree on direction (one finds harm to task success and cost; 
 
 ### 13. Verification Notes
 
-- SRC-001: Partially Verified (project page corroborated via community summaries; primary page not directly fetched).
-- SRC-044 and SRC-045: Partially Verified (canonical arXiv listings cited per the Sprint 2.1 brief; full papers not directly fetched).
-- **Sprint 2.2 verification attempt (2026-08-03):** direct WebFetch on `https://arxiv.org/abs/2602.11988` (VR-021) and `https://arxiv.org/abs/2601.20404` (VR-022) both returned `Unable to verify if domain arxiv.org is safe to fetch`. **No upgrade to `Verified` is recorded.** SRC-045 is flagged for an existence check by an external verifier (see `research/notes/verification-log.md` VR-022 — no WebSearch result corroborates the paper's existence, title, authors, or findings; if it does not exist at the canonical arXiv ID, SRC-045 must be retracted in a future sprint).
+- SRC-001: **Verified** (page content and official self-positioning verified externally via EV-001; 60k+ adoption figure is project-maintainer-reported, not independent market share).
+- SRC-044: **Verified** (existence, title, authors, dates, abstract content verified externally via EV-003; method details remain `Partially Verified`).
+- SRC-045: **Verified** (existence, title, authors, dates, abstract content verified externally via EV-004; method details remain `Partially Verified`). SRC-045 is **not** retracted.
+- **Sprint 2.2 verification attempt (2026-08-03):** direct WebFetch on `https://agents.md/`, `https://arxiv.org/abs/2602.11988`, and `https://arxiv.org/abs/2601.20404` all returned `Unable to verify if domain X is safe to fetch`. The 22 Inaccessible attempts are recorded in `research/notes/verification-log.md` (VR-001, VR-021, VR-022).
+- **Sprint 2.3 external verification reconciliation (2026-08-03):** EV-001, EV-003, and EV-004 supplied by an external reviewer with direct primary-source access; the underlying Source Register rows are now `Verified` at the abstract/metadata level. PDF body for both arXiv papers remains `Partially Verified` (full method details not directly read).
 
 ### 14. Neutral Observations
 
@@ -852,3 +857,4 @@ These are observed patterns only. They do not assert a coverage claim for APES.
 - `research/notes/search-log.md` — searches that surfaced each project.
 - `research/notes/verification-log.md` — Sprint 2.2 direct verification attempts (all `Inaccessible`).
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file (Research Gate: `RESEARCH AGAIN`).
+- `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence EV-001 through EV-006).

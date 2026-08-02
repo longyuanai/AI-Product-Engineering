@@ -1,7 +1,7 @@
 # research/competitors/candidate-projects.md
 
 - Status: Draft
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
 - Last Updated: 2026-08-03
 - Purpose: Apply Sprint 1's Candidate Selection Criteria (Appendix C of `research/research-plan.md`) to the inventory in `research/ecosystem/inventory.md`. List the **long list** of candidates, document the **short list** that advances to reverse research, and record explicit defer / decline reasons for the rest. No APES positioning conclusions are drawn here.
@@ -33,6 +33,18 @@ A "Decline" is not the same as a deletion. The reasons a project is declined are
 ## Sprint 2.2 Verification Note (2026-08-03)
 
 Direct primary-source verification was attempted for every Selected project (S-01 through S-10) and most held candidates. Per the access-window restrictions (see `research/notes/verification-log.md`), no Selected project could be directly verified. The 10-condition rule for upgrading to `Verified` was not met for any entry. The short list, long list, defer/decline reasons, and held-candidate inventory below are **unchanged** from Sprint 2.1; no project was added, removed, or re-ranked. No Source ID was renumbered.
+
+## Sprint 2.3 External Verification Reconciliation (2026-08-03)
+
+Six sources were upgraded from `Partially Verified` to `Verified` in `research/source-register.md` based on external-verification evidence (EV-001 through EV-006). The Selected list and Short List below are unchanged in structure — no project was added, removed, or re-ranked. The change here is that the underlying Source Register row has been upgraded for the entries whose claims were verified by EV-001 through EV-006:
+
+- **SRC-001 (AGENTS.md)** — affects S-10. Page content and official self-positioning now `Verified` (per EV-001). 60k+ adoption figure is project-maintainer-reported, not independent market share.
+- **SRC-015 (OpenAI Codex CLI)** — affects the held candidates cluster (OpenAI Codex CLI). Repo existence, Apache-2.0 License, README positioning, and active maintenance now `Verified` (per EV-002).
+- **SRC-044 / SRC-045 (arXiv)** — affects S-10. Both papers' existence, title, authors, dates, and abstract content now `Verified` (per EV-003 / EV-004). Method details remain `Partially Verified`. Conflicts preserved verbatim; APES does not adjudicate.
+- **SRC-003 (NIST SSDF)** — affects the held candidates cluster (standards). Now `Verified` for number, version, date, authors, official summary (per EV-006).
+- **SRC-006 (ISO/IEC/IEEE 12207:2026)** — affects the held candidates cluster (standards). Now `Verified` for number, title, edition, publication date, Published status (per EV-005). Full text remains paywalled.
+
+Sprint 2 still `In Review`.
 
 ---
 
@@ -164,3 +176,4 @@ The held candidates are **not** declined. They are deferred to a future sprint's
 - `research/notes/verification-log.md` — Sprint 2.2 direct verification attempts (all `Inaccessible`).
 - `research/competitors/reverse-research.md` — Selected projects analyzed using the 14-section template.
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file (Research Gate: `RESEARCH AGAIN`).
+- `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence).

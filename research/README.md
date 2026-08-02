@@ -71,3 +71,18 @@ Sprint 2.2 (Primary Source Verification, 2026-08-03) is a verification-only spri
 - [`tasks/sprint-02-2-primary-source-verification.md`](../tasks/sprint-02-2-primary-source-verification.md) — Sprint 2.2 task file with full sprint structure, Source ID Integrity Audit (no renumbering), and Research Gate determination.
 
 The Source Register's Claim Verification column is preserved from Sprint 2.1; the Sprint 2.2 verification attempts are recorded in the verification log without altering existing rows. SRC-045 (arXiv 2601.20404) is flagged for an existence check by an external verifier — if it does not exist at the canonical arXiv ID, SRC-045 must be retracted in a future sprint.
+
+## Sprint 2.3 Deliverables
+
+Sprint 2.3 (External Verification Reconciliation, 2026-08-03) is a reconciliation-only sprint. Per the brief: "Reduce uncertainty before increasing scope." It does **not** enter Coverage Map, Gap Analysis, Positioning Evidence, or APES standard writing. It does **not** add new sources, renumber Source IDs, or expand the candidate list.
+
+> **Outcome.** Six sources are upgraded from `Partially Verified` to `Verified` based on external-verification (EV-###) entries from an external reviewer with direct primary-source access. The 22 Sprint 2.2 Inaccessible verification attempts remain visible alongside the new External Verification Reconciliation dimension — both dimensions coexist. Sprint 2.2 statistics are corrected: 22 verification attempts / 22 unique VR IDs / 24 unique source IDs attempted / 0 repeated source IDs.
+
+- [`notes/verification-log.md`](notes/verification-log.md) — Draft (v0.2). New "External Verification Reconciliation (Sprint 2.3)" section with the 8-field schema (External Verification ID, Source ID, Canonical URL, Verification Date, Verifier Type, Claims Verified, Remaining Limitations, Outcome). Six EV rows (EV-001 through EV-006), all `Outcome: Verified`.
+- [`tasks/sprint-02-3-external-verification-reconciliation.md`](../tasks/sprint-02-3-external-verification-reconciliation.md) — Sprint 2.3 task file with full sprint structure, External Evidence Packet table, Statistics Correction, Acceptance Criteria, Remaining Limitations.
+- [`source-register.md`](source-register.md) — Draft (v0.5). Six source rows upgraded to `Verified` (SRC-001, SRC-003, SRC-006, SRC-015, SRC-044, SRC-045) with EV-### citations in the Notes column. Source Audit Statistics recomputed: Verified=6, Partially Verified=32, Unverified=14, Contradicted=0, Inaccessible=0.
+- [`ecosystem/inventory.md`](ecosystem/inventory.md) — Draft (v0.3). Per-row EV references for the six sources.
+- [`competitors/candidate-projects.md`](competitors/candidate-projects.md) — Draft (v0.3). Sprint 2.3 reconciliation note in the Short List section.
+- [`competitors/reverse-research.md`](competitors/reverse-research.md) — Draft (v0.3). §S-10 identity, §S-10 §11 conflicting approaches (full author lists and v1/v2 dates for both arXiv papers), §S-10 §13 verification notes, Cross-References.
+
+SRC-045 is **not** retracted: existence, title, authors, dates, and abstract content are confirmed by EV-004. Conflicting empirical evidence between SRC-044 and SRC-045 is preserved verbatim; APES does not adjudicate. The Research Gate remains `RESEARCH AGAIN`; Sprint 2 remains `In Review`.
