@@ -1,0 +1,20 @@
+{
+  "id": "TASK-F0-3",
+  "type": "Task",
+  "status": "Active",
+  "version": "0.1.0",
+  "owners": [
+    "APES Maintainers"
+  ],
+  "depends_on": [
+    "ADR-0002"
+  ],
+  "supersedes": [],
+  "evidence": [
+    "SRC-025",
+    "SRC-026",
+    "SRC-053",
+    "SRC-054"
+  ],
+  "last_updated": "2026-08-07"
+}

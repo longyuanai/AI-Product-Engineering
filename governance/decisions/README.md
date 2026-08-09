@@ -1,15 +1,16 @@
 # governance/decisions/
 
-- Status: Placeholder
+- Status: Active
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-09
 - Purpose: Hold lightweight decision notes for stage- or sprint-scoped choices.
 
 ## Table of Contents
 
 - [Purpose](#purpose)
 - [When to Use](#when-to-use)
+- [Decision Notes](#decision-notes)
 - [Status](#status)
 
 ## Purpose
@@ -30,6 +31,11 @@ Escalate to an ADR if any of:
 - The decision is hard to reverse.
 - It changes a scope, naming, or process rule.
 
+## Decision Notes
+
+- [`2026-08-09-f2-review-evidence.md`](2026-08-09-f2-review-evidence.md) — Initial frozen evidence and independent `Request changes` outcome for F2.
+- [`2026-08-09-f2-remediation-evidence.md`](2026-08-09-f2-remediation-evidence.md) — Frozen thirteen-finding response plus the latest implementer resource/path-hardening snapshot, ready for independent re-review.
+
 ## Status
 
-Placeholder. No decision note has been written yet.
+Active. The first F2 review requested changes. The remediation and implementer follow-up snapshots are ready, and the independent re-review outcome remains pending.

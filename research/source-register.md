@@ -1,9 +1,9 @@
 # research/source-register.md
 
-- Status: Draft (post Sprint 2.1 evidence correction; Sprint 2.2 verification attempted; Sprint 2.3 external verification reconciliation)
-- Version: v0.5
+- Status: Draft (post Sprint 2.1 evidence correction; Sprint 2.2 verification attempted; Sprint 2.3 external verification reconciliation; Foundation 0.2 reference comparison)
+- Version: v0.6
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-05
 - Purpose: Source register for the APES ecosystem research effort, per the Source Register Schema in `research/research-plan.md` §4.6 / Appendix A.
 
 ## Schema Notes
@@ -16,7 +16,7 @@ Sprint 2.1 corrects the verification model. Three orthogonal fields are now requ
 
 A row marked `Level A` may still carry `Claim Verification: Unverified` if its primary page was unreachable. **Level A/B are NOT verification statuses** and are never reported as "verified sources" in any statistics summary.
 
-Access Date convention: 2026-08-03 (Sprint 2 access window), unless otherwise noted.
+Access Date convention: 2026-08-03 (Sprint 2 access window), unless otherwise noted. Foundation 0.2 reference-comparison sources use 2026-08-05.
 
 Claim Verification rules used in this register:
 
@@ -58,8 +58,8 @@ License / Date / Maintenance rules:
 | SRC-022 | Roo Code (RooCodeInc/Roo-Code) | Open repository | RooCode Inc. | https://github.com/RooCodeInc/Roo-Code | n.d. (fork date Unverified) | 2026-08-03 | Q1 (AI coding tools) | A | Observable repository fact | Repository exists. | None observed | License terms Unverified — LICENSE file not directly fetched. Fork lineage from Cline is community-reported only. | Partially Verified | |
 | SRC-023 | GitHub Copilot — features page | Vendor documentation | GitHub / Microsoft | https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features | n.d. (continuously updated; specific version Unverified) | 2026-08-03 | Q1 (AI coding tools) | A | Official self-description | Code completions, Copilot Chat, Copilot Edits, PR Reviews, CLI assistance. | None observed | Pricing tiers change; vendor docs. | Partially Verified | docs.github.com page existence corroborated via community summary. |
 | SRC-024 | Gemini CLI (google-gemini/gemini-cli) | Open repository | Google | https://github.com/google-gemini/gemini-cli | n.d. (first-release date Unverified) | 2026-08-03 | Q1 (AI coding tools) | A | Observable repository fact | Repository exists. | None observed | License terms Unverified — LICENSE file not directly fetched. Apache 2.0 attribution community-reported only. Geo-restrictions community-reported only. | Partially Verified | |
-| SRC-025 | GitHub spec-kit | Open repository | GitHub | https://github.com/github/spec-kit | n.d. (precise first-release date Unverified) | 2026-08-03 | Q2 (spec-driven development); H-V3 | A | Observable repository fact | Repository exists. | None observed | License terms Unverified — LICENSE file not directly fetched. Specific release commands community-reported only. | Partially Verified | |
-| SRC-026 | OpenSpec (Fission-AI/OpenSpec) | Open repository | Fission AI | https://github.com/Fission-AI/OpenSpec | n.d. (specific version Unverified) | 2026-08-03 | Q2 (spec-driven development) | A | Observable repository fact | Repository exists. | None observed | License terms Unverified — LICENSE file not directly fetched. Closed-network initialization issues are third-party-reported. | Partially Verified | |
+| SRC-025 | GitHub Spec Kit | Open repository | GitHub | https://github.com/github/spec-kit | n.d. (continuously released; point-in-time version intentionally not used as an adoption signal) | 2026-08-05 | Q2 (spec-driven development); H-V3; Foundation 0.2 reference architecture | A | Observable repository fact / Official self-description | Direct inspection of the repository README and `pyproject.toml` confirmed the Constitution → Specify → Plan → Tasks → Implement core flow; optional Clarify / Analyze / Checklist controls; extensions, presets, workflows, and bundles; a Python 3.11+ `specify` CLI using Typer, Click, Rich, PyYAML, and Hatchling; and bundled Markdown templates plus Bash, PowerShell, and Python scripts for offline use. | None observed in the inspected primary files. | Project-maintainer documentation describes intended behavior, not independent outcome effectiveness. The repository evolves rapidly; exact integration and extension counts are intentionally omitted. | Verified | Refreshed 2026-08-05 by direct access to the canonical GitHub repository, README, and `pyproject.toml`. MIT license is visible in the canonical repository. |
+| SRC-026 | OpenSpec (Fission-AI/OpenSpec) | Open repository | Fission AI | https://github.com/Fission-AI/OpenSpec | n.d. (continuously released; package manifest inspected at access date) | 2026-08-05 | Q2 (spec-driven development); Foundation 0.2 reference architecture | A | Observable repository fact / Official self-description | Direct inspection of the repository README and `package.json` confirmed the artifact-guided Explore → Propose → Apply → Archive flow; change packages containing proposal, specs, design, and tasks; optional cross-repository Stores; and a Node.js 20.19+ TypeScript ESM CLI distributed through npm, built with pnpm and validated with Zod / Vitest. | None observed in the inspected primary files. | Project-maintainer documentation describes intended behavior, not independent outcome effectiveness. Stores are explicitly described by the project as beta. | Verified | Refreshed 2026-08-05 by direct access to the canonical GitHub repository, README, and `package.json`. MIT license is declared in the package manifest and visible in the repository. |
 | SRC-027 | Model Context Protocol — Anthropic announcement context | Vendor / open standard | Anthropic | https://www.anthropic.com/news/model-context-protocol (referenced) | n.d. (precise release month Unverified) | 2026-08-03 | Q5 (agent runtime); H-V4 | B | Official self-description | Open standard for connecting LLMs to data sources / tools / workflows. | None observed | Multiple third-party restatements; original announcement URL not directly verified in this access window. | Unverified | Independent confirmation via community summaries only. |
 | SRC-028 | LangGraph (langchain-ai/langgraph) | Open repository | LangChain, Inc. | https://github.com/langchain-ai/langgraph | n.d. (precise first-release date Unverified) | 2026-08-03 | Q5 (agent runtime) | A | Observable repository fact | Repository exists. | None observed | Vendor-led. | Partially Verified | |
 | SRC-029 | AutoGen (microsoft/autogen) | Open repository | Microsoft Research | https://github.com/microsoft/autogen | n.d. (precise first-release date Unverified) | 2026-08-03 | Q5 (agent runtime) | A | Observable repository fact | Repository exists. | Strategic re-org into Microsoft Agent Framework community-reported only (see SRC-033). | Current maintainer scope is community-reported only. | Partially Verified | |
@@ -86,6 +86,8 @@ License / Date / Maintenance rules:
 | SRC-050 | NIST SSDF mapping — Synopsys blog | Vendor analysis | Synopsys | https://www.synopsys.com/blogs/software-security/ssdf-bsimm14-mapping-update.html | n.d. (precise publication year Unverified) | 2026-08-03 | Q3 (SSDF adoption signal) | C | Marketing claim | SSDF ↔ BSIMM14 mapping analysis; SSDF used as basis for US attestation form. | None observed | Vendor blog. | Partially Verified | |
 | SRC-051 | DHS / CISA Secure Software Development Attestation | Government artifact | CISA / DHS | https://www.cisa.gov/ (referenced via third-party) | n.d. (precise attestation release date Unverified) | 2026-08-03 | Q3 (regulatory adoption of SSDF) | A | Official self-description | US federal attestation form requiring SSDF-aligned attestation from software vendors. | None observed | US-jurisdiction specific. Primary page not directly fetched. | Partially Verified | |
 | SRC-052 | ISO/IEC/IEEE 12207:2017 — Software life cycle processes (Edition 1, historical) | International standard | ISO / IEC / IEEE | https://www.iso.org/standard/63712.html | 2017-11 (historical edition 1) | 2026-08-03 | Q3 (engineering lifecycle standards — historical reference) | A | Official self-description | Historical Edition 1 of ISO/IEC/IEEE 12207 (2017-11); superseded by Edition 2 (SRC-006, 2026-04). | None observed | Paywalled; full text not accessible. Recorded for historical cross-reference. | Partially Verified | Historical edition recorded for traceability. |
+| SRC-053 | BMAD-METHOD | Open repository | BMad Code organization / contributors | https://github.com/bmad-code-org/BMAD-METHOD | n.d. (continuously released; package manifest inspected at access date) | 2026-08-05 | Q2 (AI-assisted product and software lifecycle); Foundation 0.2 reference architecture | A | Observable repository fact / Official self-description | Direct inspection of the repository README, workflow map, and `package.json` confirmed a four-phase Analysis → Planning → Solutioning → Implementation model; progressive Markdown / YAML artifacts; specialized skills and agents; readiness, code-review, and retrospective gates; and a Node.js 20.12+ CLI / installer with JavaScript, YAML, Markdown, Python helper scripts, Astro documentation, ESLint, Markdownlint, and automated tests. | None observed in the inspected primary files. | Project-maintainer documentation describes intended behavior, not independent delivery outcomes. The large workflow and role surface is an architectural trade-off, not evidence of effectiveness. | Verified | Added 2026-08-05 from direct canonical GitHub repository, workflow-map, and package-manifest access. MIT license is declared in `package.json`. |
+| SRC-054 | Agent OS | Open repository | Builder Methods / Brian Casel | https://github.com/buildermethods/agent-os | n.d. (continuously released; repository state inspected at access date) | 2026-08-05 | Q2 (standards injection and spec shaping); Foundation 0.2 reference architecture | A | Observable repository fact / Official self-description | Direct inspection of the README, command files, `config.yml`, and shell installer confirmed four core capabilities (discover, deploy/inject, shape, and index standards); Markdown standards plus a YAML index; profile inheritance; timestamped spec folders containing plan, shape, standards, references, and visuals; and a shell-script installer that projects command files into an agent-specific directory. | None observed in the inspected primary files. | Project-maintainer documentation describes intended behavior, not independent outcome effectiveness. The inspected installer targets `.claude/commands/agent-os/`, so cross-agent portability is asserted in the README but the inspected projection path is adapter-specific. | Verified | Added 2026-08-05 from direct canonical GitHub repository, raw command, configuration, and installer files. MIT license is visible in the repository. |
 
 ## Source Audit Statistics (recomputed post Sprint 2.1)
 
@@ -230,12 +232,27 @@ Sprint 2.3 reconciled 6 sources using external-verification evidence (EV-001 thr
 - SRC-015's row no longer claims "License terms Unverified". The Apache-2.0 attribution is now verified. The row also drops precise Star / Commit / Release counts from the Key Evidence column.
 - Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects). The 6 upgrades from Sprint 2.3 do not yet meet the threshold; the next sprint must continue verification under an access channel that permits direct primary page retrieval (or receive additional external-verification packets).
 
+## Source Audit Statistics (post Foundation 0.2 reference comparison)
+
+### Foundation 0.2 changes
+
+- Refreshed SRC-025 and SRC-026 from direct primary-source access and upgraded both from `Partially Verified` to `Verified`.
+- Added SRC-053 and SRC-054 as directly inspected Level A open-repository sources.
+- Earlier Sprint 2.x statistics remain historical snapshots. The current counts below are recomputed from the 54 source rows after the Foundation 0.2 changes.
+
+### Current totals
+
+- Total sources: **54** (SRC-001 to SRC-054 inclusive).
+- Source reliability: **A=25, B=18, C=9, D=2, E=0**.
+- Claim verification: **Verified=10, Partially Verified=32, Unverified=12, Contradicted=0, Inaccessible=0**.
+- Research Gate remains **`RESEARCH AGAIN`**: the existing gate requires at least 15 Verified sources and coverage of at least 8 projects. This comparison directly verifies 4 reference projects and does not change Sprint 2's `In Review` status.
+
 ## Notes on Quality and Limits
 
-- 52 sources are registered above. Of these, 42 are Level A or B (publisher reliability); the rest are Level C–D used for orientation or community voice per Appendix B. **Level A/B are NOT verification statuses.** See Claim Verification column for actual claim status.
+- 54 sources are registered above. Of these, 43 are Level A or B (publisher reliability); the rest are Level C–D used for orientation or community voice per Appendix B. **Level A/B are NOT verification statuses.** See Claim Verification column for actual claim status.
 - Several primary pages (GitHub repos, vendor sites, ISO standards pages) were not directly fetched during Sprint 2 / Sprint 2.1 due to network restrictions on `claude.ai` WebFetch. These are recorded with Claim Verification = `Partially Verified` or `Unverified`, with the limitation recorded explicitly.
 - No full text from any paywalled standard (ISO 12207) or commercial book (Inspired, Lean Startup, Continuous Discovery) has been copied into this repository. Only metadata and short quotes from publicly accessible summaries have been recorded.
-- Counter-evidence for H-V1 (AGENTS.md value) is recorded in **two** academic sources with conflicting findings: SRC-044 (arXiv 2602.11988, 2026-02-12) and SRC-045 (arXiv 2601.20404, 2026-01-28). Both are registered as Partially Verified independent empirical evidence; APES does not adjudicate which is correct.
+- Counter-evidence for H-V1 (AGENTS.md value) is recorded in **two** academic sources with conflicting findings: SRC-044 (arXiv 2602.11988, 2026-02-12) and SRC-045 (arXiv 2601.20404, 2026-01-28). Both are registered as Verified for existence, identity, dates, and abstract-supported findings; full-text method details remain limited. APES does not adjudicate which is correct.
 - ISO/IEC/IEEE 12207 is now registered with two rows: Edition 2 (2026-04) as the current standard (SRC-006) and Edition 1 (2017-11) as the historical version (SRC-052). No placeholder language is used.
 
 ## Cross-References
@@ -245,6 +262,8 @@ Sprint 2.3 reconciled 6 sources using external-verification evidence (EV-001 thr
 - `research/ecosystem/inventory.md` — which sources support which inventory items.
 - `research/competitors/candidate-projects.md` — which sources support which Selected projects.
 - `research/competitors/reverse-research.md` — which sources support each reverse-research entry.
+- `research/competitors/open-source-reference-comparison.md` — Foundation 0.2 functions, architecture, stack, and APES-oriented trade-offs for SRC-025, SRC-026, SRC-053, and SRC-054.
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file (Research Gate: `RESEARCH AGAIN`).
 - `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence).
+- `tasks/foundation-0-2-open-source-reference-architecture.md` — Foundation 0.2 task record; no runtime implementation.
 - `research/notes/verification-log.md` — External Verification Reconciliation section (EV-001 through EV-006).

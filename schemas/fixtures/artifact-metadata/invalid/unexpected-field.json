@@ -1,0 +1,14 @@
+{
+  "id": "AUDIT-S3-1",
+  "type": "Audit",
+  "status": "Completed",
+  "version": "0.1.0",
+  "owners": [
+    "APES Maintainers"
+  ],
+  "depends_on": [],
+  "supersedes": [],
+  "evidence": [],
+  "last_updated": "2026-08-03",
+  "notes": "This field is deliberately outside the contract."
+}

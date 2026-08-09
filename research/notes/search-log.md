@@ -1,15 +1,17 @@
 # research/notes/search-log.md
 
 - Status: Draft
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
-- Purpose: Record the searches actually executed during Sprint 2 (Ecosystem Inventory & Reverse Research). No result counts are fabricated; queries and selected sources are honest. Only processes are recorded; no APES conclusions are written here.
+- Last Updated: 2026-08-05
+- Purpose: Record the searches actually executed during Sprint 2 (Ecosystem Inventory & Reverse Research) and Foundation 0.2 (open-source reference comparison). No result counts are fabricated; queries and selected sources are honest. Only processes are recorded; no APES conclusions are written here.
 
 ## Search Platform Legend
 
 - **Web Search** — `claude.ai` WebSearch (Microsoft Bing index).
 - **Web Fetch** — `claude.ai` WebFetch (direct page fetch). Used only where the domain was reachable.
+- **GitHub CLI** — `gh` repository search / API access. In the 2026-08-05 access window the configured token was invalid and sandboxed API access was blocked, so this channel produced no selected result and no credentials were changed.
+- **Public GitHub Pages** — Direct read-only access to canonical repository pages and raw repository files through the public web channel.
 - **WebSearch was used because `claude.ai` WebFetch rejected GitHub, Anthropic, ISO, NIST, OWASP, and several other domains during Sprint 2.** Result counts are not always displayed by the search backend and are recorded as `not reported` where true.
 
 | Search ID | Query | Platform | Search Date | Filters | Approximate Result Count | Selected Sources | Exclusion Reasons | Notes |
@@ -45,6 +47,11 @@
 | SE-029 | "LangGraph LangChain framework description repository license stateful agents" | Web Search | 2026-08-03 | None | not reported | SRC-028 | Excluded CSDN tutorials; relied on langchain-ai/langgraph repo. | Confirms 2024 initial release per community. |
 | SE-030 | "AutoGen Microsoft multi-agent framework description repository license" | Web Search | 2026-08-03 | None | not reported | SRC-029, SRC-033, SRC-041 | Excluded CSDN tutorials; relied on microsoft/autogen + community consolidation report. | Confirms Microsoft Agent Framework consolidation context. |
 | SE-031 | "crewAI repository license multi-agent orchestration framework" | Web Search | 2026-08-03 | None | not reported | SRC-030 | Excluded tutorials; relied on crewAIInc/crewAI. | License to confirm. |
+| SE-032 | `gh search repos "spec driven development AI agent" --sort stars --limit 15` | GitHub CLI | 2026-08-05 | Repository search; sorted by stars | no result returned | None | Search did not complete because the configured GitHub token was invalid and sandboxed API access was blocked. | Failure recorded; no GitHub credential was modified. Public GitHub access was used for the evidence pass. |
+| SE-033 | "site:github.com/github/spec-kit GitHub spec kit repository" plus direct repository / `pyproject.toml` inspection | Public GitHub Pages | 2026-08-05 | Canonical repository and raw primary files only | not reported | SRC-025 | Excluded tutorials, package mirrors, forks, and popularity claims. | Confirmed workflow, extension model, Python CLI stack, packaged templates/scripts, and MIT license. |
+| SE-034 | "site:github.com/Fission-AI/OpenSpec OpenSpec repository" plus direct repository / `package.json` inspection | Public GitHub Pages | 2026-08-05 | Canonical repository and raw primary files only | not reported | SRC-026 | Excluded tutorials, package mirrors, forks, and popularity claims. | Confirmed artifact-guided workflow, change-package shape, Stores beta note, Node / TypeScript stack, and MIT license. |
+| SE-035 | "site:github.com/bmad-code-org/BMAD-METHOD BMAD Method repository" plus workflow-map / `package.json` inspection | Public GitHub Pages | 2026-08-05 | Canonical repository and raw primary files only | not reported | SRC-053 | Excluded forks, older-version mirrors, third-party tutorials, and popularity claims. | Confirmed four-phase workflow, progressive artifacts and gates, Node-based installer, mixed JS / YAML / Markdown / Python helper stack, and MIT license. |
+| SE-036 | "site:github.com/buildermethods/agent-os Agent OS repository" plus raw command / config / installer inspection | Public GitHub Pages | 2026-08-05 | Canonical repository and raw primary files only | not reported | SRC-054 | Excluded third-party documentation and popularity claims. | Confirmed standards discovery / injection / indexing / spec shaping, YAML profiles, shell installer, and adapter-specific command projection. |
 
 ## Process Notes
 

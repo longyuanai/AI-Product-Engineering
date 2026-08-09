@@ -1,9 +1,9 @@
 # governance/
 
-- Status: Placeholder
+- Status: Draft
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-09
 - Purpose: Hold decision records, requests for comments, and governance policies.
 
 ## Table of Contents
@@ -33,4 +33,4 @@ Governance documents capture *why* APES looks the way it does. They are append-o
 
 ## Status
 
-Placeholder. ADR-0001 has been written; everything else remains empty.
+Draft. ADR-0001, ADR-0002, and ADR-0003 are `Accepted`. ADR-0002 authorizes the schema-first direction; ADR-0003 authorizes the independent Python F2 validator runtime. The decision-note directory preserves the initial `Request changes` review, frozen remediation response, and implementer hardening follow-up. F2 remains `In Review` pending eligible independent re-review. RFC remains a placeholder, and the proposed Foundation-RFC mechanism is not yet operational.

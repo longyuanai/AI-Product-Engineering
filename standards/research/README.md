@@ -27,7 +27,7 @@ Planned scope:
 
 Out of scope:
 
-- Conducting research on competitors; that work is tracked under [`../research/competitors/`](../research/competitors/README.md).
+- Conducting research on competitors; that work is tracked under [`../../research/competitors/`](../../research/competitors/README.md).
 
 ## Status
 

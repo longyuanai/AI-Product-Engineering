@@ -2,6 +2,7 @@
 Thumbs.db
 .vscode/
 .idea/
+.claude/settings.local.json
 *.log
 node_modules/
 dist/

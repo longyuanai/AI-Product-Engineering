@@ -1,15 +1,16 @@
 # research/ecosystem/
 
-- Status: Placeholder
+- Status: Draft
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-04
 - Purpose: Hold notes on the AI tooling ecosystem relevant to APES.
 
 ## Table of Contents
 
 - [Purpose](#purpose)
 - [Scope](#scope)
+- [Documents](#documents)
 - [Status](#status)
 
 ## Purpose
@@ -29,6 +30,10 @@ Out of scope:
 - Rankings or "best tool" comparisons.
 - Unverified adoption or market-share claims.
 
+## Documents
+
+- [`inventory.md`](inventory.md) — Phase A ecosystem inventory. Draft; evidence status is inherited from the Source Register.
+
 ## Status
 
-Placeholder. No ecosystem note has been written. Sprint 0 explicitly forbids this research.
+Draft. Phase A inventory exists, but Sprint 2 remains `In Review` and the Research Gate remains `RESEARCH AGAIN`.

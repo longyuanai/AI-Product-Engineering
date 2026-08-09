@@ -1,0 +1,13 @@
+{
+  "id": "SRC-025",
+  "type": "Source",
+  "status": "Active",
+  "version": "v0.1",
+  "owners": [
+    "APES Maintainers"
+  ],
+  "depends_on": [],
+  "supersedes": [],
+  "evidence": [],
+  "last_updated": "2026-08-05"
+}

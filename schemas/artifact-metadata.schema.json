@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:apes:schema:artifact-metadata:0.2.0",
+  "title": "APES Artifact Metadata Contract Prototype",
+  "description": "Foundation 0.3 / F1 contract for a parsed YAML front matter metadata object.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "status",
+    "version",
+    "owners",
+    "depends_on",
+    "supersedes",
+    "evidence",
+    "last_updated"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/artifactId"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Source",
+        "Verification",
+        "Research",
+        "Coverage",
+        "Gap",
+        "ADR",
+        "RFC",
+        "Standard",
+        "Schema",
+        "Workflow",
+        "Task",
+        "Audit",
+        "Release"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Proposed",
+        "In Review",
+        "Accepted",
+        "Active",
+        "Completed",
+        "Superseded",
+        "Deprecated",
+        "Archived"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+    },
+    "owners": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "depends_on": {
+      "$ref": "#/$defs/referenceList"
+    },
+    "supersedes": {
+      "$ref": "#/$defs/referenceList"
+    },
+    "evidence": {
+      "$ref": "#/$defs/referenceList"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "type": {
+          "const": "Source"
+        },
+        "id": {
+          "pattern": "^SRC-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Verification"
+        },
+        "id": {
+          "pattern": "^EV-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Research"
+        },
+        "id": {
+          "pattern": "^RESEARCH-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Coverage"
+        },
+        "id": {
+          "pattern": "^COVERAGE-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Gap"
+        },
+        "id": {
+          "pattern": "^GAP-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "ADR"
+        },
+        "id": {
+          "pattern": "^ADR-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "RFC"
+        },
+        "id": {
+          "pattern": "^RFC-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Standard"
+        },
+        "id": {
+          "pattern": "^STD-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Schema"
+        },
+        "id": {
+          "pattern": "^SCHEMA-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Workflow"
+        },
+        "id": {
+          "pattern": "^WORKFLOW-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Task"
+        },
+        "id": {
+          "pattern": "^TASK-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Audit"
+        },
+        "id": {
+          "pattern": "^AUDIT-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Release"
+        },
+        "id": {
+          "pattern": "^REL-"
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "artifactId": {
+      "type": "string",
+      "pattern": "^(ADR|RFC|SRC|EV|AUDIT|TASK|SCHEMA|WORKFLOW|STD|REL|RESEARCH|COVERAGE|GAP)-[A-Z0-9]+(?:-[A-Z0-9]+)*$"
+    },
+    "referenceList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/artifactId"
+      }
+    }
+  }
+}

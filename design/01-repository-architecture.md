@@ -1,9 +1,9 @@
 # Design 01 — Repository Architecture
 
 - Status: Draft
-- Version: v0.1
+- Version: v0.2.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-09
 - Purpose: Record the architecture choices for the APES repository foundation.
 
 ## Table of Contents
@@ -47,6 +47,7 @@ AI-Product-Engineering/
 ├── research/             # Ecosystem, competitor, paper, and free-form notes
 ├── examples/             # Worked examples showing APES in practice
 ├── governance/           # ADRs, RFCs, decision notes
+├── schemas/              # Language-neutral artifact contracts and fixtures
 ├── design/               # Design documents (this file lives here)
 ├── tasks/                # Sprint and task definitions
 ├── sessions/             # Session logs
@@ -69,6 +70,7 @@ AI-Product-Engineering/
 | `research/` | Citable research notes: ecosystem, competitors, papers, free-form observations. |
 | `examples/` | Worked, validated examples of APES in practice. |
 | `governance/` | Append-only decision records (ADRs, RFCs, decision notes). |
+| `schemas/` | Language-neutral artifact contracts and compatibility fixtures; no runtime tooling. |
 | `design/` | Architecture and design documents for APES and its repository. |
 | `tasks/` | Sprint and task definitions. |
 | `sessions/` | Dated session logs. |
@@ -102,6 +104,8 @@ Reasons:
 3. **Maintenance cost.** Each tool creates a long-term support obligation that the current maintainer base cannot yet justify.
 4. **Separation of concerns.** Tools that wrap APES should live in their own repositories, each with its own RFC, ADR, and contributing community.
 
+F2 validates this boundary: the read-only `APES-Validator` runtime lives in an independent sibling Git repository under accepted [`ADR-0003`](../governance/adr/ADR-0003-f2-read-only-validator-runtime.md). This repository still contains contracts rather than runtime application source.
+
 The placeholder directories (`scripts/`, `website/`, the implied absence of `cli/`, `mcp/`, `vscode/`) make the boundary visible and easy to challenge later.
 
 ## Known Limitations
@@ -109,15 +113,15 @@ The placeholder directories (`scripts/`, `website/`, the implied absence of `cli
 - No module under `standards/` has content yet. The standard is structurally complete but substantively empty.
 - No real case study has been published. Every example in this v0.1 is hypothetical.
 - The maturity model is only stubbed. Adoption assessment is not yet reliable.
-- No automated link checker or Markdown lint rule has been pinned. The CI workflow defers the lint step behind a TODO.
+- The F2 validator provides deterministic local-link and anchor checks, but it is not yet wired into this repository's CI; no Markdown lint rule has been pinned and the CI workflow still defers linting behind a TODO.
 - License has not been chosen by maintainers. This is intentionally a placeholder.
 
 ## Extension Policy
 
 This architecture may grow, but only when:
 
-1. A real project has been run end-to-end against APES and the gap is named in a case study.
+1. A real project or a bounded compatibility prototype demonstrates the structural need.
 2. The proposed extension has been captured as an ADR (for repo-structure changes) or an RFC (for standard-level changes).
 3. The extension has been reviewed against the five Manifesto principles in [`../MANIFESTO.md`](../MANIFESTO.md).
 
-Until then, the repository layout in this document is the contract.
+Foundation 0.3 adds `schemas/` under accepted [`ADR-0002`](../governance/adr/ADR-0002-schema-first-reference-architecture.md) and its separately approved [F1 task](../tasks/foundation-0-3-contract-prototype.md). The repository layout in this document remains the contract; later runtime tooling remains outside this repository unless a future accepted decision changes that boundary.

@@ -1,0 +1,10 @@
+{
+  "id": "ADR-0002",
+  "type": "ADR",
+  "status": "Accepted",
+  "version": "0.1.0",
+  "depends_on": [],
+  "supersedes": [],
+  "evidence": [],
+  "last_updated": "2026-08-07"
+}

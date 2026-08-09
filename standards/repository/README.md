@@ -32,4 +32,4 @@ Out of scope:
 
 ## Status
 
-Placeholder. This module will be drafted after the first real case study is recorded in [`../examples/`](../examples/README.md) or in [`../research/papers/`](../research/papers/README.md).
+Placeholder. This module will be drafted after the first real case study is recorded in [`../../examples/`](../../examples/README.md) or in [`../../research/papers/`](../../research/papers/README.md).
