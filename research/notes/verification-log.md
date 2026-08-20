@@ -1,10 +1,10 @@
 # research/notes/verification-log.md
 
-- Status: Draft (post Sprint 2.2 + Sprint 2.3 External Verification Reconciliation)
-- Version: v0.2
+- Status: Draft (post Sprint 2.2 + Sprint 2.3 External Verification Reconciliation + Sprint 2.4 Targeted Re-verification)
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
-- Purpose: Record every direct primary-source verification attempt made during Sprint 2.2 (Primary Source Verification), with honest Access Result, Evidence Location, and Outcome. Per Sprint 2.2 brief §15: **"若无法直接访问足够原始来源: 不得伪造通过; Sprint 2 保持 In Review; 最终结论输出 RESEARCH AGAIN; 明确列出需要由其他具备网络访问能力的研究者验证的来源."** This file is the record of those attempts. Sprint 2.3 adds an External Verification Reconciliation section that records the EV-### entries supplied by an external reviewer with direct primary-source access. The original Sprint 2.2 Inaccessible rows are preserved unchanged.
+- Last Updated: 2026-08-15
+- Purpose: Record every direct primary-source verification attempt made during Sprint 2.2 (Primary Source Verification), with honest Access Result, Evidence Location, and Outcome. Per Sprint 2.2 brief §15: **"若无法直接访问足够原始来源: 不得伪造通过; Sprint 2 保持 In Review; 最终结论输出 RESEARCH AGAIN; 明确列出需要由其他具备网络访问能力的研究者验证的来源."** This file is the record of those attempts. Sprint 2.3 adds an External Verification Reconciliation section that records the EV-### entries supplied by an external reviewer with direct primary-source access. Sprint 2.4 appends VR-023 through VR-034 for targeted direct re-verification. The original Sprint 2.2 Inaccessible rows are preserved unchanged.
 
 ## Schema (11 fields per Sprint 2.2 brief §11)
 
@@ -51,6 +51,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-001 — AGENTS.md (SRC-001)
 
+- **Verification ID:** VR-001
 - **Source ID:** SRC-001
 - **Original URL:** https://agents.md/
 - **Access Date:** 2026-08-03
@@ -68,6 +69,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-002 — Claude Code (SRC-014)
 
+- **Verification ID:** VR-002
 - **Source ID:** SRC-014
 - **Original URL:** https://docs.claude.com/en/docs/claude-code
 - **Access Date:** 2026-08-03
@@ -85,6 +87,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-003 — OpenAI Codex CLI (SRC-015)
 
+- **Verification ID:** VR-003
 - **Source ID:** SRC-015
 - **Original URL:** https://github.com/openai/codex
 - **Access Date:** 2026-08-03
@@ -104,6 +107,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-004 — Model Context Protocol / MCP (SRC-027)
 
+- **Verification ID:** VR-004
 - **Source ID:** SRC-027
 - **Original URL:** https://modelcontextprotocol.io/ (and the introduction page)
 - **Access Date:** 2026-08-03
@@ -121,6 +125,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-005 — GitHub Spec Kit (SRC-025)
 
+- **Verification ID:** VR-005
 - **Source ID:** SRC-025
 - **Original URL:** https://github.com/github/spec-kit
 - **Access Date:** 2026-08-03
@@ -139,6 +144,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-006 — OpenSpec (SRC-026)
 
+- **Verification ID:** VR-006
 - **Source ID:** SRC-026
 - **Original URL:** https://github.com/Fission-AI/OpenSpec
 - **Access Date:** 2026-08-03
@@ -157,6 +163,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-007 — ADR (Nygard blog post) (SRC-002)
 
+- **Verification ID:** VR-007
 - **Source ID:** SRC-002
 - **Original URL:** https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
 - **Access Date:** 2026-08-03
@@ -174,6 +181,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-008 — Continuous Discovery (Torres) (SRC-008, SRC-012, SRC-036)
 
+- **Verification ID:** VR-008
 - **Source ID:** SRC-008 (book), SRC-012 (Product Talk), SRC-036 (publisher)
 - **Original URL:** https://www.producttalk.org/2021/04/continuous-discovery-habits/ (publisher page)
 - **Access Date:** 2026-08-03
@@ -192,6 +200,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-009 — Inspired (Cagan / SVPG) (SRC-009, SRC-035)
 
+- **Verification ID:** VR-009
 - **Source ID:** SRC-009
 - **Original URL:** https://svpg.com/inspired/
 - **Access Date:** 2026-08-03
@@ -209,6 +218,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-010 — Shape Up (Basecamp / Singer) (SRC-011, SRC-037)
 
+- **Verification ID:** VR-010
 - **Source ID:** SRC-011
 - **Original URL:** https://basecamp.com/shapeup
 - **Access Date:** 2026-08-03
@@ -227,6 +237,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-011 — Lean Startup (Ries) (SRC-010)
 
+- **Verification ID:** VR-011
 - **Source ID:** SRC-010
 - **Original URL:** https://theleanstartup.com/
 - **Access Date:** 2026-08-03
@@ -243,6 +254,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-012 — Jobs to Be Done (Christensen / Ulwick) (SRC-013, SRC-038)
 
+- **Verification ID:** VR-012
 - **Source ID:** SRC-013
 - **Original URL:** Strategyn site and Christensen publisher pages
 - **Access Date:** 2026-08-03
@@ -259,6 +271,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-013 — NIST SSDF SP 800-218 (SRC-003, SRC-050)
 
+- **Verification ID:** VR-013
 - **Source ID:** SRC-003
 - **Original URL:** https://csrc.nist.gov/publications/detail/sp/800-218/final
 - **Access Date:** 2026-08-03
@@ -277,6 +290,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-014 — OWASP SAMM v2 (SRC-004)
 
+- **Verification ID:** VR-014
 - **Source ID:** SRC-004
 - **Original URL:** https://owaspsamm.org/v2-0/
 - **Access Date:** 2026-08-03
@@ -295,6 +309,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-015 — OWASP ASVS v4 (SRC-005)
 
+- **Verification ID:** VR-015
 - **Source ID:** SRC-005
 - **Original URL:** https://owasp.org/www-project-application-security-verification-standard/
 - **Access Date:** 2026-08-03
@@ -311,6 +326,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-016 — ISO/IEC/IEEE 12207:2026 (SRC-006)
 
+- **Verification ID:** VR-016
 - **Source ID:** SRC-006
 - **Original URL:** https://www.iso.org/standard/90219.html
 - **Access Date:** 2026-08-03
@@ -329,6 +345,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-017 — ISO/IEC/IEEE 12207:2017 (SRC-052)
 
+- **Verification ID:** VR-017
 - **Source ID:** SRC-052
 - **Original URL:** https://www.iso.org/standard/63712.html (canonical 2017 URL)
 - **Access Date:** 2026-08-03
@@ -346,6 +363,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-018 — DORA / Accelerate (SRC-007)
 
+- **Verification ID:** VR-018
 - **Source ID:** SRC-007
 - **Original URL:** https://dora.dev/
 - **Access Date:** 2026-08-03
@@ -362,6 +380,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-019 — SRE Book (Google) (SRC-049)
 
+- **Verification ID:** VR-019
 - **Source ID:** SRC-049
 - **Original URL:** https://sre.google/sre-book/table-of-contents/
 - **Access Date:** 2026-08-03
@@ -379,6 +398,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-020 — DHS / CISA Software Attestation (SRC-051)
 
+- **Verification ID:** VR-020
 - **Source ID:** SRC-051
 - **Original URL:** CISA Software Attestation page
 - **Access Date:** 2026-08-03
@@ -395,6 +415,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-021 — arXiv 2602.11988 (SRC-044)
 
+- **Verification ID:** VR-021
 - **Source ID:** SRC-044
 - **Original URL:** https://arxiv.org/abs/2602.11988
 - **Access Date:** 2026-08-03
@@ -414,6 +435,7 @@ Per Sprint 2.2 brief §15: WebSearch result snippets are **not** treated as dire
 
 ### VR-022 — arXiv 2601.20404 (SRC-045)
 
+- **Verification ID:** VR-022
 - **Source ID:** SRC-045
 - **Original URL:** https://arxiv.org/abs/2601.20404
 - **Access Date:** 2026-08-03
@@ -537,3 +559,213 @@ The Attempt count (22) and the Source count (24) are not the same number, becaus
 - `research/competitors/reverse-research.md` — 10 Selected projects analyzed using the 14-section template.
 - `tasks/sprint-02-2-primary-source-verification.md` — the Sprint 2.2 task file.
 - `tasks/sprint-02-3-external-verification-reconciliation.md` — the Sprint 2.3 task file.
+
+---
+
+## Targeted Primary-Source Re-verification (Sprint 2.4, 2026-08-15)
+
+This section records direct primary-source access performed during Sprint 2.4. The Sprint 2.2 VR-001 through VR-022 records and the Sprint 2.3 EV-001 through EV-006 records above are preserved unchanged. Search-result summaries and third-party restatements were not used to promote any source.
+
+### VR-023 — SRC-017 (aider)
+
+- **Verification ID:** VR-023
+- **Source ID:** SRC-017
+- **Original URL:** https://github.com/Aider-AI/aider
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Repository existence; README positioning as “AI Pair Programming in Your Terminal” and pair programming with LLMs; license name; maintenance signal.
+- **Evidence Location:** Canonical repository; https://raw.githubusercontent.com/Aider-AI/aider/main/README.md; https://raw.githubusercontent.com/Aider-AI/aider/main/LICENSE.txt; https://api.github.com/repos/Aider-AI/aider/commits/main; https://api.github.com/repos/Aider-AI/aider/releases/latest
+- **License Checked:** Yes — `LICENSE.txt` contains Apache License, Version 2.0.
+- **Maintenance Checked:** Yes — latest observed `main` commit dated 2026-05-22; latest observed release v0.86.0 dated 2025-08-09. Maintenance: Active at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** No dynamic star, commit-total, or release-total count recorded. Project-maintainer positioning is not independent effectiveness evidence.
+
+### VR-024 — SRC-018 (Cline)
+
+- **Verification ID:** VR-024
+- **Source ID:** SRC-018
+- **Original URL:** https://github.com/cline/cline
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Repository existence; README positioning as an open-source coding agent in the IDE and terminal; documented CLI, VS Code, JetBrains, and SDK surfaces; license name; maintenance signal.
+- **Evidence Location:** Canonical repository; https://raw.githubusercontent.com/cline/cline/main/README.md; https://raw.githubusercontent.com/cline/cline/main/LICENSE; https://api.github.com/repos/cline/cline/commits/main; https://api.github.com/repos/cline/cline/releases/latest
+- **License Checked:** Yes — `LICENSE` contains Apache License, Version 2.0.
+- **Maintenance Checked:** Yes — latest observed `main` commit dated 2026-08-14; latest observed release `desktop-v0.0.13` dated 2026-08-14. Maintenance: Active at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** Precise rename history was not checked. No dynamic counters recorded.
+
+### VR-025 — SRC-019 (OpenHands)
+
+- **Verification ID:** VR-025
+- **Source ID:** SRC-019
+- **Original URL:** https://github.com/All-Hands-AI/OpenHands
+- **Access Date:** 2026-08-15
+- **Access Result:** Success (redirected to `OpenHands/OpenHands`)
+- **Claims Checked:** Repository existence and current canonical path; current README positioning of Agent Canvas as a self-hosted developer control center for coding agents and automations; license name; maintenance signal.
+- **Evidence Location:** https://github.com/OpenHands/OpenHands; https://raw.githubusercontent.com/OpenHands/OpenHands/main/README.md; https://raw.githubusercontent.com/OpenHands/OpenHands/main/LICENSE; https://api.github.com/repos/All-Hands-AI/OpenHands; https://api.github.com/repos/OpenHands/OpenHands/commits/main; https://api.github.com/repos/OpenHands/OpenHands/releases/latest
+- **License Checked:** Yes — `LICENSE` contains the MIT License.
+- **Maintenance Checked:** Yes — latest observed `main` commit dated 2026-08-14; latest observed release v1.13.0 dated 2026-08-13. Maintenance: Active at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** The current canonical path and README positioning differ from the earlier All-Hands-AI autonomous-software-engineering-agent framing; the current primary evidence controls this record.
+
+### VR-026 — SRC-020 (OpenCode)
+
+- **Verification ID:** VR-026
+- **Source ID:** SRC-020
+- **Original URL:** https://github.com/opencode-ai/opencode
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Repository existence; README historical positioning as a terminal-based AI assistant and move notice; license name; maintenance/archive signal.
+- **Evidence Location:** Canonical repository; https://raw.githubusercontent.com/opencode-ai/opencode/main/README.md; https://raw.githubusercontent.com/opencode-ai/opencode/main/LICENSE; https://api.github.com/repos/opencode-ai/opencode; https://api.github.com/repos/opencode-ai/opencode/commits/main; https://api.github.com/repos/opencode-ai/opencode/releases/latest
+- **License Checked:** Yes — `LICENSE` contains the MIT License.
+- **Maintenance Checked:** Yes — latest observed `main` commit dated 2025-09-18; repository metadata reports `archived: true`. Maintenance: Archived at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** The README states that the project moved and names a successor. No claim of active maintenance is made.
+
+### VR-027 — SRC-021 (Continue)
+
+- **Verification ID:** VR-027
+- **Source ID:** SRC-021
+- **Original URL:** https://github.com/continuedev/continue
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Repository existence; README positioning of the coding-agent CLI and VS Code / JetBrains extensions; official read-only notice; license name; maintenance signal.
+- **Evidence Location:** Canonical repository; https://raw.githubusercontent.com/continuedev/continue/main/README.md; https://raw.githubusercontent.com/continuedev/continue/main/LICENSE; https://api.github.com/repos/continuedev/continue; https://api.github.com/repos/continuedev/continue/commits/main; https://api.github.com/repos/continuedev/continue/releases/latest
+- **License Checked:** Yes — `LICENSE` contains Apache License, Version 2.0.
+- **Maintenance Checked:** Yes — README states that the repository is no longer actively maintained and is read-only; final release v2.0.0 dated 2026-06-19; latest observed `main` commit dated 2026-07-21. Maintenance: Read-only / no longer actively maintained at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** GitHub metadata reports `archived: false`, but the explicit README notice controls the maintenance description.
+
+### VR-028 — SRC-022 (Roo Code)
+
+- **Verification ID:** VR-028
+- **Source ID:** SRC-022
+- **Original URL:** https://github.com/RooCodeInc/Roo-Code
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Repository existence; README positioning as an AI-powered development team in the editor; official shutdown notice; license name; maintenance/archive signal.
+- **Evidence Location:** Canonical repository; https://raw.githubusercontent.com/RooCodeInc/Roo-Code/main/README.md; https://raw.githubusercontent.com/RooCodeInc/Roo-Code/main/LICENSE; https://api.github.com/repos/RooCodeInc/Roo-Code; https://api.github.com/repos/RooCodeInc/Roo-Code/commits/main; https://api.github.com/repos/RooCodeInc/Roo-Code/releases/latest
+- **License Checked:** Yes — `LICENSE` contains Apache License, Version 2.0.
+- **Maintenance Checked:** Yes — latest observed `main` commit and release v3.54.0 dated 2026-05-15; repository metadata reports `archived: true`; README records the extension shutdown. Maintenance: Archived at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** The README names successor alternatives. Fork lineage was not reconstructed in this sprint.
+
+### VR-029 — SRC-024 (Gemini CLI)
+
+- **Verification ID:** VR-029
+- **Source ID:** SRC-024
+- **Original URL:** https://github.com/google-gemini/gemini-cli
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Repository existence; README positioning as an open-source AI agent bringing Gemini into the terminal; built-in tools and MCP extensibility; license name; maintenance signal.
+- **Evidence Location:** Canonical repository; https://raw.githubusercontent.com/google-gemini/gemini-cli/main/README.md; https://raw.githubusercontent.com/google-gemini/gemini-cli/main/LICENSE; https://api.github.com/repos/google-gemini/gemini-cli/commits/main; https://api.github.com/repos/google-gemini/gemini-cli/releases/latest
+- **License Checked:** Yes — `LICENSE` contains Apache License, Version 2.0.
+- **Maintenance Checked:** Yes — latest observed `main` commit dated 2026-08-13; latest observed release v0.55.1 dated 2026-08-11. Maintenance: Active at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** Geo-restriction claims and first-release date were not checked. No dynamic counters recorded.
+
+### VR-030 — SRC-002 (Nygard ADR post)
+
+- **Verification ID:** VR-030
+- **Source ID:** SRC-002
+- **Original URL:** https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Author; publication date; the four ADR body sections Context, Decision, Status, and Consequences, plus the Title field.
+- **Evidence Location:** Canonical Cognitect post at the Original URL; the byline identifies Michael Nygard and 2011-11-15; the format section defines Title, Context, Decision, Status, and Consequences.
+- **License Checked:** Yes — the post carries a CC0 waiver.
+- **Maintenance Checked:** Not applicable — this is a dated historical practitioner post.
+- **Outcome:** Verified
+- **Notes:** Verification applies to the canonical template and metadata, not to later ADR variants or independent effectiveness.
+
+### VR-031 — SRC-004 (OWASP SAMM v2)
+
+- **Verification ID:** VR-031
+- **Source ID:** SRC-004
+- **Original URL:** https://owaspsamm.org/
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** Version 2.0; model structure; license; latest revision/maintenance signal.
+- **Evidence Location:** https://owaspsamm.org/model/; https://owaspsamm.org/release-notes-v2/; https://github.com/owaspsamm/core; https://api.github.com/repos/owaspsamm/core; https://api.github.com/repos/owaspsamm/core/commits/develop
+- **License Checked:** Yes — official site footer and canonical repository identify Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`).
+- **Maintenance Checked:** Yes — latest observed `develop` commit dated 2026-07-06. Maintenance: Active at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** Direct official pages support version, license, model structure, and activity; they do not independently establish outcome effectiveness.
+
+### VR-032 — SRC-005 (OWASP ASVS)
+
+- **Verification ID:** VR-032
+- **Source ID:** SRC-005
+- **Original URL:** https://owasp.org/www-project-application-security-verification-standard/
+- **Access Date:** 2026-08-15
+- **Access Result:** Success
+- **Claims Checked:** ASVS purpose; current stable version and release date; historical 4.0.3 version and release date.
+- **Evidence Location:** Canonical OWASP project page at the Original URL; the page lists latest stable version 5.0.0, its 2025-05-30 release announcement, and the 4.0.3 release announcement dated 2021-10-28.
+- **License Checked:** Not checked — not required for the specific SRC-005 claim in this sprint.
+- **Maintenance Checked:** Yes — current stable release 5.0.0 is identified on the directly accessed official page.
+- **Outcome:** Verified
+- **Notes:** The earlier v4/2021 row was a historical snapshot. Sprint 2.4 records both the current stable version and the historical claim without conflating them.
+
+### VR-033 — SRC-014 (Claude Code)
+
+- **Verification ID:** VR-033
+- **Source ID:** SRC-014
+- **Original URL:** https://www.anthropic.com/claude-code
+- **Access Date:** 2026-08-15
+- **Access Result:** Success (official product URL resolved to current official documentation)
+- **Claims Checked:** Official positioning; documented feature list; project-instruction file behavior; the flagged AGENTS.md-support claim.
+- **Evidence Location:** https://code.claude.com/docs/en/overview; https://code.claude.com/docs/en/memory
+- **License Checked:** Not applicable — vendor product documentation, not a repository-license claim.
+- **Maintenance Checked:** Not recorded — no release/commit claim was required for SRC-014.
+- **Outcome:** Verified
+- **Notes:** The overview documents file reading/editing, command execution, terminal/IDE/desktop/browser availability, Git, MCP, CLAUDE.md, skills, hooks, and multi-agent features. The memory page explicitly states that Claude Code reads `CLAUDE.md`, not `AGENTS.md`; `AGENTS.md` can be imported from `CLAUDE.md`, copied during initialization, or referenced through a symlink. Native automatic AGENTS.md loading was not verified and is not claimed.
+
+### VR-034 — SRC-027 (Model Context Protocol)
+
+- **Verification ID:** VR-034
+- **Source ID:** SRC-027
+- **Original URL:** https://www.anthropic.com/news/model-context-protocol
+- **Access Date:** 2026-08-15
+- **Access Result:** Success via the current canonical MCP specification and repository
+- **Claims Checked:** Specification home and protocol definition; current version; version-history mechanism and dated schema history; license terms; maintenance signal.
+- **Evidence Location:** https://modelcontextprotocol.io/specification/latest; https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning; https://github.com/modelcontextprotocol/modelcontextprotocol/tree/main/schema; https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/main/LICENSE; https://api.github.com/repos/modelcontextprotocol/modelcontextprotocol/commits/main
+- **License Checked:** Yes — canonical `LICENSE` records an MIT-to-Apache-2.0 transition: new code/spec contributions are Apache-2.0; documentation outside the specifications is CC BY 4.0; some older contributions remain MIT.
+- **Maintenance Checked:** Yes — current specification is 2026-07-28; latest observed repository commit dated 2026-08-14. Maintenance: Active at access date (2026-08-15).
+- **Outcome:** Verified
+- **Notes:** The repository README's short MIT label is less specific than the controlling transition notice in `LICENSE`; this limitation is preserved rather than flattened to a single license label.
+
+### Sprint 2.4 Outcome
+
+| Metric | Before Sprint 2.4 (actual repository baseline) | After Sprint 2.4 | Change |
+|---|---:|---:|---:|
+| Total Source IDs | 54 | 54 | 0 |
+| Verified | 10 | 22 | +12 |
+| Partially Verified | 32 | 22 | -10 |
+| Unverified | 12 | 10 | -2 |
+| Contradicted | 0 | 0 | 0 |
+| Inaccessible (Source Register status) | 0 | 0 | 0 |
+
+All twelve targeted sources were upgraded because the specific claims were directly observed in primary pages. This does not erase the historical Sprint 2.2 access failures.
+
+For the Sprint 2.4 project gate, a conservative repository/project-only count is used: 13 unique projects. It comprises the six already directly verified projects SRC-001, SRC-015, SRC-025, SRC-026, SRC-053, and SRC-054, plus the seven P0 repositories SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, and SRC-024. The five P1 items are not used to inflate the project count.
+
+**Research Gate: `READY FOR REVIEW`.** The current register has 22 Verified sources (threshold ≥15) and 13 directly verified repository/project rows under the conservative Sprint 2.4 counting rule (threshold ≥8). No Source ID was added, removed, or renumbered. Sprint 2 remains `In Review` until maintainer review.
+
+### Sources Still Requiring Direct Primary-Source Verification
+
+- **Partially Verified (22):** SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-023, SRC-028, SRC-029, SRC-030, SRC-031, SRC-035, SRC-036, SRC-037, SRC-038, SRC-039, SRC-040, SRC-049, SRC-050, SRC-051, SRC-052.
+- **Unverified (10):** SRC-016, SRC-032, SRC-033, SRC-034, SRC-041, SRC-042, SRC-043, SRC-046, SRC-047, SRC-048.
+
+### Sprint 2.4 Reconciliation Notes
+
+- The task brief stated a 60-source baseline with 16 Verified sources, while the checked-in v0.6 register actually contained 54 Source IDs with 10 Verified, 32 Partially Verified, and 12 Unverified. Sprint 2.4 uses the checked-in repository as its auditable baseline and does not invent SRC-055 through SRC-060.
+- The legacy Sprint 2.2 gate wording refers to directly verified “Selected projects,” while the Sprint 2.4 brief explicitly designates the seven P0 repositories as raising the project count. This section applies the current brief's project/artifact counting rule; maintainers should confirm that interpretation when reviewing the gate.
+- No dynamic popularity or repository-total counts were recorded.
+
+### Cross-References (Sprint 2.4)
+
+- `research/source-register.md` — twelve updated source rows, v0.7.
+- `research/ecosystem/inventory.md` — synchronized verification states and maintenance caveats.
+- `research/competitors/candidate-projects.md` — verification-only candidate reconciliation; no re-ranking.
+- `research/competitors/reverse-research.md` — ADR and Claude Code evidence corrections plus P0 status note.
+- `tasks/sprint-02-4-targeted-reverification.md` — Sprint 2.4 task file and gate record.

@@ -1,9 +1,9 @@
 # research/competitors/candidate-projects.md
 
 - Status: Draft
-- Version: v0.3
+- Version: v0.4
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-15
 - Purpose: Apply Sprint 1's Candidate Selection Criteria (Appendix C of `research/research-plan.md`) to the inventory in `research/ecosystem/inventory.md`. List the **long list** of candidates, document the **short list** that advances to reverse research, and record explicit defer / decline reasons for the rest. No APES positioning conclusions are drawn here.
 
 ## Candidate Selection Criteria (Recap)
@@ -45,6 +45,27 @@ Six sources were upgraded from `Partially Verified` to `Verified` in `research/s
 - **SRC-006 (ISO/IEC/IEEE 12207:2026)** — affects the held candidates cluster (standards). Now `Verified` for number, title, edition, publication date, Published status (per EV-005). Full text remains paywalled.
 
 Sprint 2 still `In Review`.
+
+## Sprint 2.4 Targeted Primary-Source Re-verification (2026-08-15)
+
+Sprint 2.4 directly accessed the canonical primary pages for twelve sources. This is a verification-only reconciliation: the Long List, Final Short List, held/decline placement, and ranking are not changed.
+
+| Source | Project / Artifact | Before | After | Directly observed state at 2026-08-15 |
+|---|---|---|---|---|
+| SRC-002 | ADR (Nygard) | Partially Verified | Verified | Author, 2011-11-15 date, Title plus four body sections, and CC0 waiver observed. |
+| SRC-004 | OWASP SAMM v2 | Partially Verified | Verified | Version 2.0, model structure, CC BY-SA 4.0, and 2026-07-06 repository activity observed; Active at access date. |
+| SRC-005 | OWASP ASVS | Partially Verified | Verified | Current stable 5.0.0 released 2025-05-30; historical 4.0.3 release dated 2021-10-28. |
+| SRC-014 | Claude Code | Unverified | Verified | Official positioning and feature documentation observed; `CLAUDE.md` is read by default, while `AGENTS.md` requires import, copy, or symlink handling. |
+| SRC-017 | aider | Partially Verified | Verified | README, Apache-2.0 `LICENSE.txt`, and recent commit evidence observed; Active at access date. |
+| SRC-018 | Cline | Partially Verified | Verified | README, Apache-2.0 `LICENSE`, and 2026-08-14 commit/release evidence observed; Active at access date. |
+| SRC-019 | OpenHands / Agent Canvas | Partially Verified | Verified | Requested path redirects to `OpenHands/OpenHands`; current positioning, MIT `LICENSE`, and 2026-08 activity observed; Active at access date. |
+| SRC-020 | OpenCode | Partially Verified | Verified | README move notice, MIT `LICENSE`, and archive state observed; Archived at access date. |
+| SRC-021 | Continue | Partially Verified | Verified | README, Apache-2.0 `LICENSE`, final release, and official read-only notice observed; no longer actively maintained. |
+| SRC-022 | Roo Code | Partially Verified | Verified | README shutdown notice, Apache-2.0 `LICENSE`, and archive state observed; Archived at access date. |
+| SRC-024 | Gemini CLI | Partially Verified | Verified | README, Apache-2.0 `LICENSE`, and 2026-08 commit/release evidence observed; Active at access date. |
+| SRC-027 | MCP | Unverified | Verified | Current 2026-07-28 specification, version history, transitional license notice, and recent repository activity observed; Active at access date. |
+
+The newly observed archive/read-only states may justify a later selection-policy review, but Sprint 2.4 does not unilaterally re-rank or move candidates. Under a conservative repository/project-only count, 13 projects are directly verified (six prior projects plus the seven P0 repositories; the five P1 items are excluded from this count), so the Research Gate is `READY FOR REVIEW`; Sprint 2 remains `In Review` pending maintainer review.
 
 ---
 
@@ -177,3 +198,4 @@ The held candidates are **not** declined. They are deferred to a future sprint's
 - `research/competitors/reverse-research.md` — Selected projects analyzed using the 14-section template.
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file (Research Gate: `RESEARCH AGAIN`).
 - `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence).
+- `tasks/sprint-02-4-targeted-reverification.md` — Sprint 2.4 task file (12 direct primary-source upgrades; Research Gate: `READY FOR REVIEW`).

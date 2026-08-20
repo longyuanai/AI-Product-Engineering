@@ -1,9 +1,9 @@
 # research/competitors/reverse-research.md
 
 - Status: Draft
-- Version: v0.3
+- Version: v0.4
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-15
 - Purpose: Apply the Core Project Analysis Schema (Appendix E of `research/research-plan.md`) — the 14-section template — to each project on the short list at `research/competitors/candidate-projects.md`. Surface both **confirming** and **contradicting** evidence for any APES-adjacent hypothesis. Do not derive APES positioning, market conclusions, gap claims, or standards here.
 
 ## Reverse Research Template (Applied to Each Project)
@@ -435,7 +435,7 @@ ODI is the operational counterpart of JTBD for those who adopt a quantitative an
 - Author/Maintainer: Michael Nygard (initial blog post); community maintainers for tooling
 - First Release: 2011-11-15 (Nygard's blog post)
 - Latest Release: ADR format is stable; tooling evolves
-- License: Format is open; Nygard's blog post per his terms
+- License: Nygard's canonical post carries a CC0 waiver
 - Sources: SRC-002, SRC-040
 
 ### 2. Stated Problem
@@ -499,7 +499,7 @@ Treats reasons and consequences as primary; rejects "decision by authority witho
 
 ### 13. Verification Notes
 
-- Page Unverified (cognitect.com blog post blocked). Multiple community sources corroborate 2011-11-15 publication.
+- Verified via direct access to the canonical Cognitect post on 2026-08-15 (VR-030): Michael Nygard byline, 2011-11-15 date, Title plus Context / Decision / Status / Consequences format, and CC0 waiver were observed. Later ADR variants remain outside this specific claim.
 
 ### 14. Neutral Observations
 
@@ -669,8 +669,8 @@ Spec Kit is the vendor-led counterpart to OpenSpec. Both encode a similar shape;
 
 - Name: Claude Code
 - Author/Maintainer: Anthropic
-- First Release: 2025 (vendor release)
-- Latest Release: Updated through 2026-08 (access window)
+- First Release: Not checked in Sprint 2.4
+- Latest Release: Not checked in Sprint 2.4 (official documentation is continuously updated)
 - License: Vendor terms of use
 - Sources: SRC-014
 
@@ -690,31 +690,31 @@ Software developers using Anthropic Claude models for coding work.
 ### 5. Core Concepts / Vocabulary
 
 - Agentic CLI
-- AGENTS.md support (per vendor docs)
+- CLAUDE.md project instructions; optional AGENTS.md import / copy / symlink workflow
 - Plan mode
 - Sub-agents / tool calls
 
 ### 6. Process Model / Lifecycle Stages
 
-1. Read project context (including AGENTS.md).
+1. Read project context (including `CLAUDE.md`; optionally import or reference `AGENTS.md`).
 2. Plan.
 3. Execute via tools.
 4. Report back to the user.
 
 ### 7. Inputs and Outputs
 
-- **Inputs**: project files, user prompts, optional AGENTS.md.
+- **Inputs**: project files, user prompts, `CLAUDE.md`, and optionally imported or referenced `AGENTS.md` content.
 - **Outputs**: file edits, command outputs, agentic actions.
 
 ### 8. Tooling and Artifact Conventions
 
-- AGENTS.md (per vendor docs).
+- `CLAUDE.md`; optional `@AGENTS.md` import, copy, or symlink workflow.
 - Plan mode artifacts.
 - Permission / tool-use configuration.
 
 ### 9. Quality and Evidence Discipline
 
-Vendor-defined. Treats user confirmation as a checkpoint; treats AGENTS.md as authoritative project context.
+Vendor-defined. Official documentation describes plan/permission checkpoints and `CLAUDE.md` as the native project-context file.
 
 ### 10. Adjacent / Complementary Tools
 
@@ -731,15 +731,17 @@ Vendor-defined. Treats user confirmation as a checkpoint; treats AGENTS.md as au
 ### 12. Open Questions / Known Limits
 
 - Vendor-controlled; subject to Anthropic product decisions.
-- Page Unverified for full feature set due to WebFetch restrictions.
+- Vendor self-description does not establish independent outcome effectiveness.
+- Native automatic `AGENTS.md` loading is not documented; the official memory page explicitly distinguishes it from `CLAUDE.md`.
 
 ### 13. Verification Notes
 
-- Page Unverified (anthropic.com blocked). Vendor documentation corroborated via community sources.
+- Verified via direct access to official Claude Code overview and memory documentation on 2026-08-15 (VR-033). The overview directly documents codebase reading, file edits, command execution, terminal/IDE/desktop/browser availability, Git, MCP, `CLAUDE.md`, skills, hooks, and multi-agent features.
+- The memory page states that Claude Code reads `CLAUDE.md`, not `AGENTS.md`. Existing `AGENTS.md` content can be imported from `CLAUDE.md`, copied during initialization, or reached through a symlink. The earlier native-support wording was therefore narrowed.
 
 ### 14. Neutral Observations
 
-Claude Code is one of multiple agentic CLIs. The presence of AGENTS.md support is itself a notable convention.
+Claude Code is one of multiple agentic coding tools. Its documented interoperability with existing `AGENTS.md` content is indirect through project-memory configuration rather than native automatic loading.
 
 ---
 
@@ -837,6 +839,22 @@ AGENTS.md is an emerging convention with active adoption, active vendor support,
 
 ---
 
+## Sprint 2.4 Targeted Re-verification Note (2026-08-15)
+
+The seven P0 repository sources were directly checked at the repository, README, LICENSE, and commit/release or official maintenance-notice level. This evidence update does not add new reverse-research subjects or re-rank the Final Short List.
+
+| Source | Project | Directly verified positioning / license | Maintenance at access date (2026-08-15) |
+|---|---|---|---|
+| SRC-017 | aider | Terminal AI pair programming; Apache-2.0 | Active; latest observed `main` commit 2026-05-22 |
+| SRC-018 | Cline | Open-source coding agent in IDE and terminal; Apache-2.0 | Active; latest observed commit/release 2026-08-14 |
+| SRC-019 | OpenHands / Agent Canvas | Self-hosted developer control center for coding agents and automations; MIT | Active; canonical path is now `OpenHands/OpenHands`; latest observed `main` commit 2026-08-14 |
+| SRC-020 | OpenCode | Historical terminal-based AI assistant; MIT | Archived; latest observed `main` commit 2025-09-18 |
+| SRC-021 | Continue | Coding-agent CLI plus VS Code / JetBrains extensions; Apache-2.0 | Read-only / no longer actively maintained; final v2.0.0 release 2026-06-19 |
+| SRC-022 | Roo Code | AI-powered development team in the editor; Apache-2.0 | Archived and extension shut down; latest observed commit/release 2026-05-15 |
+| SRC-024 | Gemini CLI | Open-source terminal AI agent with built-in tools and MCP extensibility; Apache-2.0 | Active; latest observed `main` commit 2026-08-13 |
+
+The remaining P1 updates are reflected at their selected-project sections where applicable (S-06 ADR and S-09 Claude Code) and in the Source Register / ecosystem inventory for OWASP SAMM, OWASP ASVS, and MCP. All twelve targeted rows are `Verified` at the specific claim level; project-maintainer and vendor self-descriptions are not treated as independent effectiveness evidence.
+
 ## Cross-Project Patterns Observed (Descriptive, Non-Conclusory)
 
 The following observations are descriptive. They are **not** APES positioning, gap claims, or market conclusions.
@@ -858,3 +876,4 @@ These are observed patterns only. They do not assert a coverage claim for APES.
 - `research/notes/verification-log.md` — Sprint 2.2 direct verification attempts (all `Inaccessible`).
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file (Research Gate: `RESEARCH AGAIN`).
 - `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence EV-001 through EV-006).
+- `tasks/sprint-02-4-targeted-reverification.md` — Sprint 2.4 task file (12 direct primary-source upgrades; Research Gate: `READY FOR REVIEW`).

@@ -1,9 +1,9 @@
 # research/ecosystem/inventory.md
 
 - Status: Draft
-- Version: v0.3
+- Version: v0.4
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-15
 - Purpose: Descriptive catalog of adjacent artifacts APES might coexist with. Each entry records what the artifact is, where it lives, and which APES lifecycle stage (if any) it nominally touches. No gap analysis, no positioning claims, no APES conclusions.
 
 ## Scope and Limits
@@ -31,6 +31,14 @@ The 6 upgrades:
 - **SRC-045 (arXiv 2601.20404)** → C5 row. Promotion from `Partially Verified` to `Verified`. Not retracted; abstract content verified. Conflicts with SRC-044 are preserved verbatim; APES does not adjudicate.
 
 Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects).
+
+## Sprint 2.4 Targeted Primary-Source Re-verification (2026-08-15)
+
+Direct access to canonical project pages, README files, LICENSE files or official license notices, repository activity, and official documentation upgraded twelve Source Register rows: SRC-002, SRC-004, SRC-005, SRC-014, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-024, and SRC-027. The inventory rows below synchronize those claim-level outcomes without changing category membership or drawing effectiveness conclusions.
+
+Maintenance evidence changed the descriptive state of three C6 entries: OpenCode and Roo Code are archived, and Continue's README declares the repository read-only and no longer actively maintained. OpenHands now resolves to `OpenHands/OpenHands` and its current README positions Agent Canvas as a self-hosted developer control center. Claude Code's official documentation reads `CLAUDE.md` by default; `AGENTS.md` is supported through import, copy, or symlink workflows rather than native automatic loading.
+
+Using a conservative repository/project-only count, the register now contains 22 Verified sources and 13 directly verified projects: six previously direct-verified projects plus the seven P0 repositories. The five P1 items are excluded from the project count. The Research Gate is `READY FOR REVIEW`; Sprint 2 remains `In Review` pending maintainer review.
 
 ## Cross-Reference Conventions
 
@@ -89,12 +97,12 @@ Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects
 
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
-| Architecture Decision Record (ADR) | Michael Nygard | 2011 | SRC-002, SRC-040 | Status/Context/Decision/Consequences template for capturing architectural decisions | Partially Verified (cognitect blog + adr.github.io corroboration) |
+| Architecture Decision Record (ADR) | Michael Nygard | 2011 | SRC-002, SRC-040 | Title plus Context / Decision / Status / Consequences template for capturing architectural decisions | Verified for the canonical Nygard post (direct author, date, template, and CC0 observation via VR-030); SRC-040 remains Partially Verified |
 | ADRs GitHub catalog (adr.github.io) | Community | n.d. | SRC-040 | Public catalog of ADR examples and tooling | Partially Verified |
 | Markdown Any Decision Record (MADR) | Oliver Kopp et al. | 2018 (per community) | SRC-040 (related) | ADR variant with structured options and tradeoffs | Partially Verified (community-reported only) |
 | OpenSpec | Fission-AI | n.d. (precise version Unverified) | SRC-026 | Open spec/plan format for AI coding workflows | Partially Verified (repo exists; license Unverified) |
 | Spec Kit | GitHub | n.d. (precise release date Unverified) | SRC-025 | GitHub's spec-driven development toolkit | Partially Verified (repo exists; license Unverified) |
-| Plan-mode artifacts (Claude Code / Gemini CLI / others) | Anthropic / Google / various | 2024 onward | SRC-014, SRC-024 | Plan-then-execute conversational artifact patterns | Unverified (vendor pages unreachable) |
+| Plan-mode artifacts (Claude Code / Gemini CLI / others) | Anthropic / Google / various | 2024 onward | SRC-014, SRC-024 | Plan-then-execute conversational artifact patterns | Partially Verified (SRC-014 and SRC-024 identities and documented feature surfaces are Verified via VR-033 and VR-029; the combined named plan-mode pattern is not directly established for both tools) |
 
 ### C4. Open Engineering Process / Practice Frameworks
 
@@ -105,8 +113,8 @@ Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects
 | The Phoenix Project / DevOps Handbook | Gene Kim et al. | n.d. (years Unverified) | SRC-049 (related) | DevOps narrative and process references | Partially Verified |
 | DORA / Accelerate State of DevOps Reports | DORA / Google Cloud | n.d. (annual cadence; specific years Unverified) | SRC-007 | Annual metrics-driven DevOps survey | Partially Verified (dora.dev corroboration) |
 | NIST SSDF (SP 800-218) | NIST | 2022-02 | SRC-003, SRC-050 | Secure software development framework | Verified (number, version, date, authors, official summary verified externally via EV-006; SSDF is a security practices framework, not a complete product-engineering standard) |
-| OWASP SAMM v2 | OWASP | n.d. (v2.x line) | SRC-004 | Software assurance maturity model | Partially Verified |
-| OWASP ASVS v4 | OWASP | n.d. (v4 line) | SRC-005 | Application security verification standard | Partially Verified |
+| OWASP SAMM v2 | OWASP | Version 2.0 | SRC-004 | Software assurance maturity model with five business functions and fifteen practices | Verified (official model/release pages, CC BY-SA 4.0 notice, and 2026-07-06 repository activity directly observed via VR-031) |
+| OWASP ASVS | OWASP | 5.0.0 released 2025-05-30 | SRC-005 | Application security verification standard | Verified (official page directly identifies current stable 5.0.0 and historical 4.0.3 release dated 2021-10-28 via VR-032) |
 
 ### C5. Adjacent AI-Specific Process Guidance
 
@@ -122,17 +130,17 @@ Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects
 
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
-| Claude Code | Anthropic | n.d. (vendor site unreachable; precise date Unverified) | SRC-014 | Agentic CLI coding agent | Unverified (vendor marketing claim) |
+| Claude Code | Anthropic | n.d. (continuously updated official documentation) | SRC-014 | Agentic coding tool available in terminal, IDE, desktop, and browser | Verified (official positioning and documented Git, MCP, CLAUDE.md, skills, hooks, and multi-agent features directly observed via VR-033; vendor self-description) |
 | OpenAI Codex CLI | OpenAI | n.d. (precise release date Unverified; dynamic dates intentionally not recorded) | SRC-015 | Open-source agentic coding CLI | Verified (repo exists, README positions as terminal coding agent, Apache-2.0 License, active maintenance at access date 2026-08-03 — verified externally via EV-002) |
 | Cursor | Anysphere | n.d. (Cursor 2.0 release date Unverified) | SRC-016 | AI-native IDE | Unverified (vendor marketing claim) |
-| aider | Paul Gauthier (Aider-AI) | n.d. (first-release year Unverified) | SRC-017 | Terminal AI pair-programming tool | Partially Verified (repo exists; license Unverified) |
-| Cline | cline/cline | n.d. (precise rename date Unverified) | SRC-018 | VS Code AI agent extension | Partially Verified (repo exists; license Unverified) |
-| OpenHands | All-Hands-AI | n.d. (MIT license attribution Unverified) | SRC-019 | Autonomous software engineering agent | Partially Verified (repo exists; license Unverified) |
-| OpenCode | opencode-ai | n.d. (first-release date Unverified) | SRC-020 | Terminal AI coding tool | Partially Verified (repo exists; license Unverified) |
-| Continue | continuedev | n.d. (first-release date Unverified) | SRC-021 | VS Code / JetBrains AI extension | Partially Verified (repo exists; license Unverified) |
-| Roo Code | RooCodeInc | n.d. (fork date Unverified) | SRC-022 | VS Code AI coding agent | Partially Verified (repo exists; license Unverified) |
+| aider | Paul Gauthier (Aider-AI) | n.d. (first-release year Unverified) | SRC-017 | Terminal AI pair-programming tool | Verified (README, Apache-2.0 `LICENSE.txt`, and recent `main` activity directly observed via VR-023); Active at access date (2026-08-15) |
+| Cline | cline/cline | n.d. (precise rename date Unverified) | SRC-018 | Open-source coding agent for IDE and terminal | Verified (README, Apache-2.0 `LICENSE`, and 2026-08-14 commit/release activity directly observed via VR-024); Active at access date (2026-08-15) |
+| OpenHands / Agent Canvas | OpenHands | n.d. (path and positioning changed) | SRC-019 | Self-hosted developer control center for coding agents and automations | Verified (current README, MIT `LICENSE`, and 2026-08-14 commit activity directly observed via VR-025); Active at access date (2026-08-15) |
+| OpenCode | opencode-ai | n.d. (first-release date Unverified) | SRC-020 | Historical terminal-based AI assistant; repository points to a successor | Verified (README, MIT `LICENSE`, and archive state directly observed via VR-026); Archived at access date (2026-08-15) |
+| Continue | continuedev | n.d. (first-release date Unverified) | SRC-021 | Coding-agent CLI plus VS Code / JetBrains extensions | Verified (README, Apache-2.0 `LICENSE`, final release, and maintenance notice directly observed via VR-027); Read-only / no longer actively maintained at access date (2026-08-15) |
+| Roo Code | RooCodeInc | n.d. (fork date Unverified) | SRC-022 | AI-powered development team in the editor; official extension shut down | Verified (README, Apache-2.0 `LICENSE`, and archive state directly observed via VR-028); Archived at access date (2026-08-15) |
 | GitHub Copilot | GitHub / Microsoft | n.d. (continuously updated) | SRC-023 | AI pair-programmer | Partially Verified (vendor docs corroborated) |
-| Gemini CLI | Google | n.d. (first-release date Unverified) | SRC-024 | Open-source terminal AI assistant | Partially Verified (repo exists; license Unverified) |
+| Gemini CLI | Google | n.d. (first-release date Unverified) | SRC-024 | Open-source terminal AI agent with built-in tools and MCP extensibility | Verified (README, Apache-2.0 `LICENSE`, and 2026-08 activity directly observed via VR-029); Active at access date (2026-08-15) |
 | Sourcegraph Cody (decline case) | Sourcegraph | n.d. (specific snapshot date Unverified) | SRC-031 | AI coding assistant, activity diminished | Partially Verified (repo exists; maintenance status community-reported) |
 
 ### C7. Engineering Standards, Security Baselines, Governance Documents
@@ -140,8 +148,8 @@ Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
 | NIST SSDF (SP 800-218) | NIST | 2022-02 | SRC-003, SRC-050 | Secure software development practices | Verified (number, version, date, authors, official summary verified externally via EV-006; SSDF is a security practices framework, not a complete product-engineering standard) |
-| OWASP SAMM v2 | OWASP | n.d. (v2.x line) | SRC-004 | Software assurance maturity model | Partially Verified |
-| OWASP ASVS v4 | OWASP | n.d. (v4 line) | SRC-005 | Application security verification | Partially Verified |
+| OWASP SAMM v2 | OWASP | Version 2.0 | SRC-004 | Software assurance maturity model | Verified (official model/release pages, CC BY-SA 4.0 notice, and repository activity directly observed via VR-031) |
+| OWASP ASVS | OWASP | 5.0.0 released 2025-05-30 | SRC-005 | Application security verification | Verified (official current and historical release notices directly observed via VR-032) |
 | ISO/IEC/IEEE 12207:2026 (Edition 2) | ISO / IEC / IEEE | 2026-04 | SRC-006 | Current edition of "Systems and software engineering — Software life cycle processes" | Verified (number, title, edition, publication date, Published status verified externally via EV-005; full text paywalled; only public metadata and abstract are verified) |
 | ISO/IEC/IEEE 12207:2017 (Edition 1, historical) | ISO / IEC / IEEE | 2017-11 | SRC-052 | Historical edition, superseded by 2026 Edition 2 | Partially Verified (canonical URL referenced; full text paywalled) |
 | DHS/CISA Software Attestation | DHS / CISA | n.d. (precise attestation release date Unverified) | SRC-051 | Federal secure software development attestation guidance | Partially Verified |
@@ -163,7 +171,7 @@ Sprint 2 still `In Review` per the original gate (≥15 Verified + ≥8 projects
 
 | Item | Author / Maintainer | Year | Source(s) | What It Is | Verification Status |
 |---|---|---|---|---|---|
-| Model Context Protocol (MCP) | Anthropic / open community | n.d. (precise release month Unverified) | SRC-027 | Open protocol for tool/context interchange with LLMs | Unverified (vendor announcement page unreachable) |
+| Model Context Protocol (MCP) | Anthropic / open community | Current specification 2026-07-28 | SRC-027 | Open protocol for tool/context interchange with LLM applications | Verified (specification home, versioning/history, transitional license notice, and repository activity directly observed via VR-034); Active at access date (2026-08-15) |
 | LangGraph | LangChain | n.d. (first-release date Unverified) | SRC-028 | Stateful multi-agent orchestration graph | Partially Verified (repo exists) |
 | AutoGen | Microsoft Research | n.d. (first-release date Unverified) | SRC-029 | Multi-agent conversation framework | Partially Verified (repo exists) |
 | Microsoft Agent Framework (consolidation) | Microsoft | n.d. (announcement date Unverified) | SRC-033 | Consolidated agent framework reported to absorb AutoGen + Semantic Kernel | Unverified (original announcement URL Unverified) |
@@ -196,3 +204,4 @@ The following were inspected during Sprint 2 but were excluded from inventory:
 - `research/research-plan.md` — original research plan that defined this inventory's structure.
 - `tasks/sprint-02-2-primary-source-verification.md` — Sprint 2.2 task file.
 - `tasks/sprint-02-3-external-verification-reconciliation.md` — Sprint 2.3 task file (6 sources upgraded via external-verification evidence).
+- `tasks/sprint-02-4-targeted-reverification.md` — Sprint 2.4 task file (12 sources directly re-verified; Research Gate: `READY FOR REVIEW`).
