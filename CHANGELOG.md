@@ -1,9 +1,9 @@
 # Changelog
 
 - Status: Active
-- Version: v0.1
+- Version: v0.2.0-alpha.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-10
+- Last Updated: 2026-08-20
 - Purpose: Track notable changes to APES using the Keep a Changelog format.
 
 All notable changes to this project will be documented in this file.
@@ -12,6 +12,55 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+
+No changes have been assigned beyond the alpha candidate.
+
+## [0.2.0-alpha.1] - 2026-08-19
+
+### Alpha Summary
+
+- Declared the repository-wide Apache License 2.0 (`Apache-2.0`) boundary through ADR-0004.
+- Connected all nine lifecycle stages to a canonical template, exit-gate checklist, project-owned working copies, a tool-neutral one-stage command, and a named human gate owner.
+- Added a canonical Getting Started path, Claude Code and Codex adaptations, internal Idea-stage dogfood, release-readiness governance, and five read-only repository contracts.
+- Classified this candidate as a provisional APES Project Layer snapshot and preserved Sprint 2 `In Review`, Research Gate `RESEARCH AGAIN`, F2 `In Review / Request changes`, F3 unstarted, and OQ-11 unresolved.
+- Prepared the candidate without creating a commit, tag, push, hosted release, release bundle, checksum manifest, or F5 artifact.
+- Closed release-task remediation with a frozen one-way readiness digest anchor, a passing 15-test contract run, unchanged protected-path fingerprint, and a fresh `Pending` Gate 1 re-review record while preserving the authoritative human `Deferred` result and pending `Release / Hold` decision.
+
+### Known Limitations
+
+- Standard module bodies remain placeholders and are optional context only.
+- No external real-project case, adoption evidence, or independent methodology validation exists.
+- Internal maintainer dogfood is acceptance evidence only; Gate 1 and `Release / Hold` remain human decisions owned by `longyuan`.
+- This prerelease is not final v0.2, a Foundation or Research OS version assignment, F5, a deterministic Release Layer bundle, a mature standard, or an industry standard.
+
+### Added — Sprint 05: Lifecycle Templates and Stage Gates (2026-08-19)
+
+- Added nine vendor-neutral lifecycle document templates with the repository metadata header, resolvable Table of Contents, source and access-date evidence fields, explicit exclusions, and boundary statements.
+- Added nine stage-gate checklists covering Idea → Discovery through Knowledge → Discovery, with required entry artifacts, evidence criteria, failure records, and compensating-evidence rules.
+- Activated `templates/README.md` and `docs/stage-gates.md`, indexed all new artifacts, and documented the current Idea / `standards/repository/` lifecycle asymmetry without changing the directory structure.
+- Documented the Schema v0.2.0 taxonomy gap as OQ-11. Templates and checklists temporarily use the schema-valid `Workflow` type and `WORKFLOW-` prefix; no Schema or RFC file was changed.
+- Corrected the stale Sprint 04 metadata status and expanded the read-only repository contract suite from seven to ten tests for template metadata, type-prefix compatibility, vendor neutrality, and exact stage-to-gate coverage.
+- Kept F2 and Sprint 2 gate states, GitHub Actions, production dependencies, application code, and the sibling validator repository unchanged.
+
+### Added — Repository Contract Tests (2026-08-18)
+
+- Added seven read-only `unittest` checks for JSON Schema fixtures, Markdown links and anchors, Source Register statistics, verification-log records, Coverage Map dimensions/distribution, and directory indexes.
+- Reconciled the current Source Register statistics with its 54 rows after Sprint 2.4: Verified=22, Partially Verified=22, Unverified=10.
+- Synchronized verification-log metadata with the appended VR-023 through VR-034 records (v0.3, Last Updated 2026-08-15).
+- Corrected Sprint 3's two stale 10×18 matrix references to 10×19 and indexed the current Sprint 4 task and new `tests/` directory.
+- Kept the test dependency ephemeral (`uv run --with jsonschema`) and left GitHub Actions, production dependencies, and application code unchanged.
+- Ignored Python bytecode caches and documented `python -B` so local test runs do not pollute the repository worktree.
+
+### Changed — Sprint 2.4 (2026-08-15)
+
+- Directly re-verified twelve targeted primary sources and appended VR-023 through VR-034 to `research/notes/verification-log.md` with actual access date 2026-08-15, direct evidence locations, license checks where applicable, and repository maintenance signals.
+- Advanced `research/source-register.md` to v0.7 and upgraded SRC-002, SRC-004, SRC-005, SRC-014, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-024, and SRC-027 to `Verified` for the specific directly observed claims.
+- Synchronized `research/ecosystem/inventory.md`, `research/competitors/candidate-projects.md`, `research/competitors/reverse-research.md`, and `research/README.md` without adding, removing, or re-ranking candidates and without entering Phase C or Phase D.
+- Recorded maintenance corrections: OpenCode and Roo Code are archived; Continue is read-only and no longer actively maintained; the requested OpenHands path redirects to `OpenHands/OpenHands` and its current README uses the Agent Canvas positioning.
+- Corrected the Claude Code evidence boundary: official documentation reads `CLAUDE.md` by default; existing `AGENTS.md` content is handled through import, copy, or symlink workflows rather than native automatic loading.
+- Used the checked-in v0.6 register as the auditable baseline because it contains 54 sources with Verified=10, Partially Verified=32, and Unverified=12, rather than the task brief's 60/16/32/12 figures. The v0.7 result is Verified=22, Partially Verified=22, and Unverified=10; no SRC-055 through SRC-060 identifiers were invented.
+- Set the Research Gate to `READY FOR REVIEW`: 22 Verified sources exceed the threshold of 15, and a conservative repository/project-only count gives 13 directly verified projects, exceeding the threshold of 8. Sprint 2 remains `In Review` pending maintainer confirmation of the baseline and gate wording.
+- Added `tasks/sprint-02-4-targeted-reverification.md` and registered it in `tasks/README.md`. No dependency, implementation, ADR, RFC, commit, push, or tag was created.
 
 ### Added — Implementation F2: Read-Only Validator (2026-08-09)
 

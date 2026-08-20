@@ -1,14 +1,15 @@
 # AI Product Engineering
 
-- Status: Draft
-- Version: v0.1
+- Status: Alpha Candidate
+- Version: v0.2.0-alpha.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-10
+- Last Updated: 2026-08-19
 - Purpose: Project landing page for the AI Product Engineering Standard (APES).
 
 ## Table of Contents
 
 - [What is APES](#what-is-apes)
+- [Alpha Promise](#alpha-promise)
 - [Current Status](#current-status)
 - [Core Problem](#core-problem)
 - [Lifecycle Overview](#lifecycle-overview)
@@ -29,9 +30,17 @@
 
 AI Product Engineering Standard (APES) is a vendor-neutral, evidence-driven framework that covers the full AI product journey — from idea discovery through launch and retrospective.
 
+## Alpha Promise
+
+> `v0.2.0-alpha.1` provides documented and repository-contract-tested mappings for all nine APES lifecycle stages from canonical template/checklist inputs to project-owned artifact/gate-record paths. Internal maintainer dogfood has exercised only the Idea path; the other eight paths and unaffiliated first-time-user usability remain unverified. A named human alone records the final gate decision.
+
+**[Start here: run one APES stage](docs/getting-started.md).** The alpha path stops after evidence is handed to the named human gate owner; it never advances to the next stage automatically.
+
 ## Current Status
 
-APES is an **early draft (v0.1)**. The standard has not been validated against multiple real projects yet. Treat all content as proposal-stage, not as established practice. F2 Read-Only Validator is implemented and `In Review` in the independent `APES-Validator` repository; ADR-0002 and ADR-0003 are `Accepted`, Sprint 2 remains `In Review`, and the Research Gate remains `RESEARCH AGAIN`.
+`v0.2.0-alpha.1` is a provisional **APES Project Layer** release candidate. It previews the v0.2 templates, manual stage gates, and tool guidance, but it is not final v0.2, a Foundation or Research OS version assignment, F5, a deterministic Release Layer bundle, a mature or externally validated methodology, or an industry standard. Standard module bodies remain placeholders, no external real-project case exists, and internal dogfood is not adoption evidence.
+
+F2 remains `In Review / Request changes` pending eligible independent re-review; F3 has not started. Sprint 2 remains `In Review`, and the current Research Gate remains `RESEARCH AGAIN`. Historical Sprint 2.4 `READY FOR REVIEW` wording is preserved as that task's recommendation, not current release authority.
 
 ## Core Problem
 
@@ -78,6 +87,7 @@ These principles are explained in [`MANIFESTO.md`](MANIFESTO.md).
 - [`assets/`](assets/README.md) — Diagrams, images, and other media.
 - [`schemas/`](schemas/README.md) — Language-neutral artifact contracts and compatibility fixtures.
 - [`scripts/`](scripts/README.md) — Helper scripts for repository operations.
+- [`tests/`](tests/README.md) — Repeatable repository contract tests.
 - [`website/`](website/README.md) — Future website source (not yet implemented).
 
 ## Roadmap
@@ -87,16 +97,19 @@ See [`ROADMAP.md`](ROADMAP.md) for current and planned versions.
 Summary:
 
 - **v0.1** — Foundation, research, core standard drafts, one real case study.
-- **v0.2** — Templates, checklists, Claude Code / Codex usage guides.
+- **v0.2.0-alpha.1** — Provisional Project Layer preview of templates, manual gates, and Claude Code / Codex usage guides; the real-case criterion remains unmet.
+- **v0.2** — Complete templates, checklists, tooling guidance, expanded glossary, and FAQ.
 - **v0.5** — More real cases, automated checks.
 - **v1.0** — Stable release validated by multiple real projects.
 
 ## How to Use This Repository
 
-1. Read [`VISION.md`](VISION.md) to understand the long-term direction.
-2. Read [`docs/lifecycle.md`](docs/lifecycle.md) and [`docs/stage-gates.md`](docs/stage-gates.md).
-3. Start with the stage relevant to your current work in [`standards/`](standards/README.md).
-4. Track work via [`tasks/`](tasks/README.md) and decisions via [`governance/`](governance/README.md).
+1. Open the canonical [`Getting Started`](docs/getting-started.md) path.
+2. Choose exactly one current lifecycle stage and its mapped template and exit-gate checklist.
+3. Copy both canonical files to project-owned working paths.
+4. Use the tool-neutral [`run-apes-stage`](commands/run-apes-stage.md) command or one adapter under [`examples/`](examples/README.md).
+5. Let the agent prepare the artifact, evidence, and gate state; the named human owner records the final manual gate decision.
+6. Stop after the decision. Starting another stage is a separate action.
 
 ## Contributing
 
@@ -104,7 +117,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). All contributions must cite evidence f
 
 ## License
 
-See [`LICENSE`](LICENSE). License selection is pending maintainer decision at this stage.
+Repository-authored APES content is licensed under the [Apache License 2.0](LICENSE), SPDX identifier `Apache-2.0`. The boundary covers documentation, templates, checklists, schemas, fixtures, tests, examples, commands, and governance records; third-party material retains its original rights and notices. See [`ADR-0004`](governance/adr/ADR-0004-apache-2-0-repository-license.md).
 
 ## Disclaimer
 

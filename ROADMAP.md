@@ -3,7 +3,7 @@
 - Status: Draft
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-19
 - Purpose: Public, versioned roadmap for APES.
 
 ## Table of Contents
@@ -27,6 +27,8 @@ This roadmap is direction, not a contract. It will be revised as we learn from r
 - One real-case study (design and data collection, not necessarily a finished product).
 
 ## v0.2 — Templates and Tooling Guidance
+
+`v0.2.0-alpha.1` is a provisional Project Layer preview of this surface. It connects the templates, stage-gate checklists, and tool adaptations into a one-stage manual-gate workflow; it does not complete final v0.2. The roadmap requirement for a real case remains unmet because maintainer dogfood is internal acceptance evidence only.
 
 - Document templates for each lifecycle stage.
 - Quality and stage-gate checklists.

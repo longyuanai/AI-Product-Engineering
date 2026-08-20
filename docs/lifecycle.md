@@ -3,7 +3,7 @@
 - Status: Placeholder
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-19
 - Purpose: Describe the end-to-end AI product lifecycle used by APES.
 
 ## Table of Contents
@@ -29,7 +29,7 @@ APES organizes product engineering into nine stages. Stages are sequential at th
 8. **Growth** — Acquire, activate, and retain users.
 9. **Knowledge** — Capture learnings and feed them back into Discovery.
 
-Each stage has its own standard under [`../standards/`](../standards/README.md).
+Eight stages currently have matching placeholder module directories under [`../standards/`](../standards/README.md). Idea is represented at the lifecycle and template layers rather than by a standard module, while `standards/repository/` is a cross-cutting module and not a lifecycle stage.
 
 ## Iteration
 

@@ -3,13 +3,14 @@
 - Status: Placeholder
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-19
 - Purpose: Hold the AI Product Engineering Standard itself, organized by lifecycle stage.
 
 ## Table of Contents
 
 - [Purpose](#purpose)
 - [Layout](#layout)
+- [Lifecycle Alignment](#lifecycle-alignment)
 - [How Modules Are Added](#how-modules-are-added)
 - [Current Status](#current-status)
 
@@ -28,6 +29,16 @@ This directory contains the actual APES standard. Each subdirectory corresponds 
 - [`engineering/`](engineering/README.md) — Building the system.
 - [`growth/`](growth/README.md) — Acquiring and retaining users.
 - [`knowledge/`](knowledge/README.md) — Capturing and reusing learnings.
+
+## Lifecycle Alignment
+
+The current scaffold is intentionally asymmetric with the nine-stage lifecycle:
+
+- Discovery through Knowledge have matching placeholder module directories.
+- Idea has no standard module directory. In the current boundary it is captured by the lifecycle definition and the reusable Idea brief template, without implying that a permanent Idea standard module has been approved.
+- `repository/` is cross-cutting guidance for APES-related repository organization and does not represent a lifecycle stage.
+
+Changing this directory structure would be a separately reviewed structural decision. This documentation records the current boundary without creating, renaming, or removing modules.
 
 ## How Modules Are Added
 

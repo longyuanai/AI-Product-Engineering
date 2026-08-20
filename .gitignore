@@ -4,6 +4,8 @@ Thumbs.db
 .idea/
 .claude/settings.local.json
 *.log
+__pycache__/
+*.py[cod]
 node_modules/
 dist/
 build/

@@ -1,9 +1,9 @@
 # research/
 
 - Status: Draft
-- Version: v0.3
+- Version: v0.4
 - Owner: APES Maintainers
-- Last Updated: 2026-08-07
+- Last Updated: 2026-08-19
 - Purpose: Hold research notes used to inform the APES standard.
 
 ## Table of Contents
@@ -16,6 +16,7 @@
 - [Sprint 2 Deliverables](#sprint-2-deliverables)
 - [Sprint 2.2 Deliverables](#sprint-22-deliverables)
 - [Sprint 2.3 Deliverables](#sprint-23-deliverables)
+- [Sprint 2.4 Deliverables](#sprint-24-deliverables)
 - [Sprint 3 Deliverables](#sprint-3-deliverables)
 - [Sprint 3.1 Deliverables](#sprint-31-deliverables)
 - [Foundation 0.2 Reference Research](#foundation-02-reference-research)
@@ -43,7 +44,7 @@ Every note must include:
 
 ## Status
 
-Research execution has begun and remains in Draft / In Review status. Phase A inventory and Initial Reverse Research, source verification work, Phase B coverage mapping, and the Foundation 0.2 reference comparison are present. Sprint 2 remains `In Review`; the Research Gate remains `RESEARCH AGAIN`. No research artifact should be treated as an accepted APES conclusion until the applicable review gate is satisfied.
+Research execution has begun and remains in Draft / In Review status. Phase A inventory and Initial Reverse Research, source verification work, Phase B coverage mapping, and the Foundation 0.2 reference comparison are present. Sprint 2 remains `In Review`. Sprint 2.4 recorded a `READY FOR REVIEW` recommendation based on 22 Verified sources and 13 directly verified repositories/projects under a conservative counting rule; current release authority remains `RESEARCH AGAIN`. No research artifact should be treated as an accepted APES conclusion until maintainer review is complete.
 
 ## Research Plan
 
@@ -98,19 +99,36 @@ Sprint 2.3 (External Verification Reconciliation, 2026-08-03) is a reconciliatio
 - Conflicting empirical evidence between SRC-044 and SRC-045 is preserved verbatim; APES does not adjudicate. The methodological note that "conclusions cannot be generalized to all repositories, models, agents, or tasks; experimental setup must be cited. The 'AGENTS.md is always harmful' generalization is not supported" is recorded.
 - Research Gate remains **`RESEARCH AGAIN`**; Sprint 2 remains **`In Review`**. The 10-condition rule was met for the six sources only because the external reviewer had direct primary-source access.
 
+## Sprint 2.4 Deliverables
+
+Sprint 2.4 (Targeted Primary-Source Re-verification, 2026-08-15) directly accessed canonical primary pages for seven priority repositories and five previously flagged official sources. It does not enter Phase C (Gap Analysis), Phase D (Positioning Evidence), or APES standard writing; it adds no source, candidate, ADR, RFC, dependency, or implementation artifact.
+
+> **Outcome.** Twelve Source Register rows were upgraded: SRC-002, SRC-004, SRC-005, SRC-014, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-024, and SRC-027. The checked-in v0.6 baseline was 54 sources with Verified=10, Partially Verified=32, and Unverified=12; the v0.7 result is Verified=22, Partially Verified=22, and Unverified=10. The task brief's 60/16/32/12 baseline did not match the repository and no missing Source IDs were invented.
+
+- [`notes/verification-log.md`](notes/verification-log.md) — VR-023 through VR-034 using the Sprint 2.2 11-field schema, each with actual access date 2026-08-15 and direct evidence locations.
+- [`source-register.md`](source-register.md) — Draft v0.7; twelve claim-level promotions with direct primary evidence, current maintenance wording, and explicit limitations.
+- [`ecosystem/inventory.md`](ecosystem/inventory.md) — synchronized verification states, current versions, canonical project positioning, and maintenance caveats.
+- [`competitors/candidate-projects.md`](competitors/candidate-projects.md) — verification-only reconciliation; no candidate was added, removed, or re-ranked.
+- [`competitors/reverse-research.md`](competitors/reverse-research.md) — direct ADR / Claude Code corrections and a bounded P0 repository evidence note.
+- [`tasks/sprint-02-4-targeted-reverification.md`](../tasks/sprint-02-4-targeted-reverification.md) — scope, verification evidence, gate calculation, open questions, and final Sprint status.
+
+Three material maintenance corrections are preserved: OpenCode and Roo Code are archived; Continue is read-only and no longer actively maintained. The requested OpenHands URL now resolves to `OpenHands/OpenHands`, whose current README positions Agent Canvas as a self-hosted developer control center. Claude Code's official memory documentation reads `CLAUDE.md` by default and documents `AGENTS.md` through import, copy, or symlink workflows rather than native automatic loading.
+
+**Research Gate: `READY FOR REVIEW`.** The source threshold is 22 ≥ 15. A conservative repository/project-only count gives 13 unique directly verified projects: six prior projects plus the seven P0 repositories; the five P1 items are excluded from this count. This exceeds the threshold of 8. Sprint 2 remains `In Review` until maintainers confirm the gate interpretation and reconcile the task-brief baseline mismatch. Phase C and Phase D remain unstarted.
+
 ## Sprint 3 Deliverables
 
 Sprint 3 (Coverage Map / Phase B, 2026-08-03) runs **Phase B (Coverage Map)** of `research/research-plan.md` §4.1 for the 10 Selected projects in `research/competitors/candidate-projects.md`. Coverage Mapping is descriptive, not feature-comparison, not gap analysis, not APES positioning. Sprint 3 does **not** enter Phase C (Gap Analysis), Phase D (Positioning Evidence), or APES standard writing.
 
 > **Phase alignment.** Sprint 3 = Phase B only. Phase A was Sprint 2 (Inventory + Initial Reverse Research). Phase C and Phase D are deliberately deferred to future sprints.
 
-> **Sprint 2 status note.** Sprint 2 remains `In Review` per Sprint 2.1 and the Research Gate is `RESEARCH AGAIN` per Sprint 2.2. Sprint 3 does not change either; it builds on the Sprint 2.3 evidence trail.
+> **Sprint 2 status note.** At Sprint 3 execution time, Sprint 2 remained `In Review` and the Research Gate was `RESEARCH AGAIN` per Sprint 2.2. Sprint 3 did not change either; Sprint 2.4 later moved the gate to `READY FOR REVIEW` while retaining `In Review` status.
 
 - [`coverage/coverage-map.md`](coverage/coverage-map.md) — Draft (v0.1). Narrative coverage for each Selected project (S-01 through S-10): lifecycle responsibility, primary purpose, artifact types, engineering scope, standards involved, governance role, security role. Every claim references `SRC-NNN`.
 - [`coverage/lifecycle-coverage-matrix.md`](coverage/lifecycle-coverage-matrix.md) — Draft (v0.1). 10 projects × 19 Sprint 3 lifecycle stages matrix. Cell values: Primary / Secondary / Partial / None / Unknown. Every non-empty cell carries Source ID + Evidence Type + Confidence.
 - [`coverage/artifact-relationship-map.md`](coverage/artifact-relationship-map.md) — Draft (v0.1). 15 artifact types mapped to Selected projects that produce / consume them: AGENTS.md, CLAUDE.md, SPEC, RFC, ADR, Task, Checklist, Template, Prompt, Policy, Workflow, Architecture Decision, Knowledge Base, Standard, Command.
 
-Sprint 3 explicitly did **not** produce: a Gap Analysis, Feature Matrix, Lifecycle Gap claim, Market Positioning, Competitive Positioning, SWOT, Roadmap, Recommendations, Vision, Priorities, Implementation Plan, APES Design, APES Architecture, Standard Modules, Prompt Library, new APES Commands/Templates/Checklists, Plugin Design, CLI, MCP, Website, Business Strategy, Brand Strategy, or any statement that APES is missing something. The 22 Sprint 2.2 Inaccessible verification attempts and the 6 Sprint 2.3 External Verification Reconciliation entries remain visible; Sprint 2 evidence is unchanged.
+Sprint 3 explicitly did **not** produce: a Gap Analysis, Feature Matrix, Lifecycle Gap claim, Market Positioning, Competitive Positioning, SWOT, Roadmap, Recommendations, Vision, Priorities, Implementation Plan, APES Design, APES Architecture, Standard Modules, Prompt Library, new APES Commands/Templates/Checklists, Plugin Design, CLI, MCP, Website, Business Strategy, Brand Strategy, or any statement that APES is missing something. The 22 Sprint 2.2 Inaccessible verification attempts and the 6 Sprint 2.3 External Verification Reconciliation entries remain visible. Sprint 3 itself did not alter Sprint 2 evidence; Sprint 2.4 later appended a separate verification dimension.
 
 ## Sprint 3.1 Deliverables
 
@@ -123,15 +141,15 @@ Sprint 3.1 (Coverage Audit, 2026-08-03) is an audit-only sprint that verifies Sp
 - [`coverage/artifact-relationship-map.md`](coverage/artifact-relationship-map.md) — Draft (v0.1, post-audit). 15 artifact types mapped to Selected projects that produce / consume them. Audit Finding C corrected the S-07 artifact-type summary count from 4 to 5.
 - [`tasks/sprint-03-1-coverage-audit.md`](../tasks/sprint-03-1-coverage-audit.md) — Sprint 3.1 audit task file with Goal, Inputs, Audit Methodology, eight Audit Tasks Executed, eleven Audit Findings (A through K), Final Aggregate Counts, Source ID Integrity Audit, Coverage Rules, Cell-Value Scale, Confidence Scale, Deliverables, Scope, Out of Scope, Acceptance Criteria, Verification, Remaining Limitations, Status.
 
-Sprint 3.1 explicitly did **not** produce: new research, new sources, Source ID renumbering, a Gap Analysis, a Feature Matrix, a Lifecycle Gap claim, Market Positioning, Competitive Positioning, SWOT, Roadmap, Recommendations, Vision, Priorities, Implementation Plan, APES Design, APES Architecture, Standard Modules, Prompt Library, new APES Commands/Templates/Checklists, Plugin Design, CLI, MCP, Website, Business Strategy, Brand Strategy, or any statement that APES is missing something. Sprint 2 remains `In Review`; Research Gate remains `RESEARCH AGAIN`; no change to either.
+Sprint 3.1 explicitly did **not** produce: new research, new sources, Source ID renumbering, a Gap Analysis, a Feature Matrix, a Lifecycle Gap claim, Market Positioning, Competitive Positioning, SWOT, Roadmap, Recommendations, Vision, Priorities, Implementation Plan, APES Design, APES Architecture, Standard Modules, Prompt Library, new APES Commands/Templates/Checklists, Plugin Design, CLI, MCP, Website, Business Strategy, Brand Strategy, or any statement that APES is missing something. At Sprint 3.1 execution time, Sprint 2 remained `In Review` and the Research Gate remained `RESEARCH AGAIN`; Sprint 2.4 later changed only the gate determination.
 
 ## Foundation 0.2 Reference Research
 
 Foundation 0.2 (2026-08-05) performed a bounded implementation-reference comparison outside the Phase A–D research sequence. It inspected canonical GitHub evidence for GitHub Spec Kit, OpenSpec, BMAD-METHOD, and Agent OS, while separating observed repository facts from APES-oriented inferences.
 
 - [`competitors/open-source-reference-comparison.md`](competitors/open-source-reference-comparison.md) — functions, architecture, technology stack, strengths, limitations, and cross-project patterns for four reference projects.
-- [`source-register.md`](source-register.md) — current register of 54 sources (SRC-001 through SRC-054): Verified=10, Partially Verified=32, Unverified=12.
+- [`source-register.md`](source-register.md) — current v0.7 register of 54 sources (SRC-001 through SRC-054): Verified=22, Partially Verified=22, Unverified=10.
 - [`notes/search-log.md`](notes/search-log.md) — SE-032 through SE-036 record the GitHub CLI failure and the successful canonical public evidence pass.
 - [`../tasks/foundation-0-2-open-source-reference-architecture.md`](../tasks/foundation-0-2-open-source-reference-architecture.md) — completed documentation-only task record.
 
-The comparison supports Proposed ADR-0002 but does not accept it or authorize implementation. Phase C and Phase D remain unstarted; Sprint 2 remains `In Review` and the Research Gate remains `RESEARCH AGAIN`.
+The comparison supported Proposed ADR-0002 at the time of Foundation 0.2; later governance records control its current state. Phase C and Phase D remain unstarted; Sprint 2 remains `In Review`, and Sprint 2.4 moved the Research Gate to `READY FOR REVIEW` pending maintainer confirmation.

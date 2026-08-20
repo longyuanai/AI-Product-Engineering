@@ -1,35 +1,71 @@
 # Glossary
 
-- Status: Placeholder
-- Version: v0.1
+- Status: Active
+- Version: v0.2
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
-- Purpose: Provide a shared vocabulary for APES.
+- Last Updated: 2026-08-19
+- Purpose: Define the terms required to run the APES alpha one-stage workflow consistently.
 
 ## Table of Contents
 
 - [How to Use](#how-to-use)
-- [Terms (Placeholder)](#terms-placeholder)
-- [Next Steps](#next-steps)
+- [Terms](#terms)
+- [Boundary](#boundary)
 
 ## How to Use
 
-When a term has multiple common meanings, APES picks one and defines it here. If a term used in the standard is not in this glossary, treat it as a candidate for addition.
+These definitions govern the `v0.2.0-alpha.1` user path. A module may add narrower definitions later, but it must not silently change these workflow meanings.
 
-## Terms (Placeholder)
+## Terms
 
-The following terms will be defined in later sprints as they are introduced by specific modules:
+### Alpha / Prerelease
 
-- APES (AI Product Engineering Standard)
-- Stage Gate
-- Evidence
-- Validation
-- Lifecycle Stage
-- ADR (Architecture Decision Record)
-- RFC (Request for Comments)
-- Maturity Level
+A provisional, incomplete release intended for bounded use and feedback. The APES alpha is not final v0.2, F5, a mature standard, or an externally validated methodology.
 
-## Next Steps
+### Canonical Checklist
 
-- Terms will be added as each module becomes Draft or Accepted.
-- Suggestions for new glossary entries can be made via a feature request issue.
+The read-only APES source checklist mapped to a lifecycle transition. Users copy it to a project-owned gate record before adding evidence or decisions.
+
+### Canonical Template
+
+The read-only APES source structure mapped to a lifecycle stage. Users copy it to a project-owned stage artifact before filling it.
+
+### Compensating Evidence
+
+Evidence that addresses the same criterion when the preferred evidence is unavailable. It must state provenance, access date, limitations, owner, and expiry or review date; it never creates a silent waiver.
+
+### Decision Owner
+
+The named human accountable for recording the final manual gate result. An agent may prepare evidence and criterion state but may not impersonate this owner.
+
+### Evidence
+
+A traceable observation, source, dataset, test result, or record used to support a claim. Material evidence includes its source and access date and exposes relevant limitations.
+
+### Exit Gate
+
+The evidence-based decision point between the selected stage and its next lifecycle stage. The permitted results are `Pass`, `Failed`, or `Deferred`.
+
+### Gate Record
+
+The project-owned working copy of a canonical checklist that contains criterion state, evidence references, gaps, compensating evidence, ownership, review date, and the human decision.
+
+### Internal Dogfood
+
+Use of APES by its maintainers to test clarity and operability. It is internal acceptance evidence, not external validation, adoption evidence, or a real-project case.
+
+### Lifecycle Stage
+
+One bounded position in the APES cycle: Idea, Discovery, Research, Validation, Product, Business, Engineering, Growth, or Knowledge.
+
+### Stage Artifact
+
+The project-owned output produced from the canonical template for one selected lifecycle stage.
+
+### Working Copy
+
+A project-owned copy of a canonical APES file. Project evidence and decisions are recorded in working copies so upstream APES sources remain clean and upgradeable.
+
+## Boundary
+
+The glossary defines the active alpha workflow only. OQ-11 remains unresolved, so templates and checklists continue to use the Schema v0.2.0 `Workflow` type and `WORKFLOW-` prefix.

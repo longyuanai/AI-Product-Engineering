@@ -3,7 +3,7 @@
 - Status: Completed
 - Sprint: 3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-03
+- Last Updated: 2026-08-18
 - Purpose: Run **Phase B (Coverage Map)** of `research/research-plan.md` §4.1 for the 10 Selected projects in `research/competitors/candidate-projects.md`. Describe observed lifecycle responsibility, primary purpose, artifact types, engineering scope, standards involved, governance role, and security role. Do **NOT** enter Phase C (Gap Analysis), Phase D (Positioning Evidence), or APES standard writing. Do **NOT** modify any file outside the allowed list.
 
 ## Goal
@@ -49,7 +49,7 @@ AGENTS.md, CLAUDE.md, SPEC, RFC, ADR, Task, Checklist, Template, Prompt, Policy,
 | # | Deliverable | Status |
 |---|---|---|
 | 1 | `research/coverage/coverage-map.md` — narrative coverage for S-01 through S-10 | Completed |
-| 2 | `research/coverage/lifecycle-coverage-matrix.md` — 10×18 matrix with Source ID + Evidence Type + Confidence per non-empty cell | Completed |
+| 2 | `research/coverage/lifecycle-coverage-matrix.md` — 10×19 matrix with Source ID + Evidence Type + Confidence per non-empty cell | Completed |
 | 3 | `research/coverage/artifact-relationship-map.md` — 15 artifact types mapped to producing / consuming Selected projects | Completed |
 | 4 | `tasks/sprint-03-coverage-map.md` (this file) | Completed |
 | 5 | Update `research/README.md` to add Sprint 3 deliverables pointer | Completed |
@@ -113,7 +113,7 @@ Explicitly forbidden in this sprint and **not** attempted:
 ## Acceptance Criteria
 
 - `research/coverage/coverage-map.md` exists and contains narrative coverage for all 10 Selected projects (S-01 through S-10).
-- `research/coverage/lifecycle-coverage-matrix.md` exists and contains a 10×18 matrix; every non-empty cell carries a Source ID + Evidence Type + Confidence triple.
+- `research/coverage/lifecycle-coverage-matrix.md` exists and contains a 10×19 matrix; every non-empty cell carries a Source ID + Evidence Type + Confidence triple.
 - `research/coverage/artifact-relationship-map.md` exists and covers all 15 artifact types named in the Sprint 3 brief.
 - No Gap Analysis, Feature Matrix, Lifecycle Gap claim, Market Positioning, Competitive Positioning, SWOT, Roadmap, Recommendations, Vision, Priorities, Implementation Plan, APES Design, APES Architecture, Standard Modules, Prompt Library, new APES Commands/Templates/Checklists, Plugin Design, CLI, MCP, Website, Business Strategy, Brand Strategy, or statement that APES is missing something appears in any Sprint 3 deliverable.
 - Sprint 2 status remains `In Review`; Research Gate remains `RESEARCH AGAIN`. No change to either unless evidence requires it (it does not).

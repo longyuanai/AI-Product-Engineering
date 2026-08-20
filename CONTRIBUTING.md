@@ -15,6 +15,7 @@
 - [Pull Request Rules](#pull-request-rules)
 - [What We Do Not Accept](#what-we-do-not-accept)
 - [Review Process](#review-process)
+- [Contribution License](#contribution-license)
 
 ## Before You Start
 
@@ -67,3 +68,9 @@ Every Pull Request must state:
 2. Domain reviewers are assigned based on the affected stage.
 3. The PR is merged once consensus is reached and required checks pass.
 4. Any meaningful change is reflected in [`CHANGELOG.md`](CHANGELOG.md).
+
+## Contribution License
+
+APES is licensed under the [Apache License 2.0](LICENSE), SPDX identifier `Apache-2.0`. Unless you explicitly state otherwise, a contribution intentionally submitted for inclusion in this repository is provided under the same terms, consistent with section 5 of the license.
+
+Third-party material retains its original copyright, license, and attribution requirements. Contributors must identify such material and its provenance rather than assuming the repository license relicenses it. This project guidance is not legal advice; contributors remain responsible for rights they grant and material they submit.

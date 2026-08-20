@@ -3,7 +3,7 @@
 - Status: Active
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-09
+- Last Updated: 2026-08-19
 - Purpose: Hold lightweight decision notes for stage- or sprint-scoped choices.
 
 ## Table of Contents
@@ -35,6 +35,7 @@ Escalate to an ADR if any of:
 
 - [`2026-08-09-f2-review-evidence.md`](2026-08-09-f2-review-evidence.md) — Initial frozen evidence and independent `Request changes` outcome for F2.
 - [`2026-08-09-f2-remediation-evidence.md`](2026-08-09-f2-remediation-evidence.md) — Frozen thirteen-finding response plus the latest implementer resource/path-hardening snapshot, ready for independent re-review.
+- [`2026-08-19-v0-2-0-alpha-1-release-candidate.md`](2026-08-19-v0-2-0-alpha-1-release-candidate.md) — Bounded alpha candidate, preserved authority, and pending human `Release / Hold` decision.
 
 ## Status
 

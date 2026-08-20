@@ -3,7 +3,7 @@
 - Status: Draft
 - Version: v0.1
 - Owner: APES Maintainers
-- Last Updated: 2026-08-09
+- Last Updated: 2026-08-19
 - Purpose: Hold decision records, requests for comments, and governance policies.
 
 ## Table of Contents
@@ -33,4 +33,4 @@ Governance documents capture *why* APES looks the way it does. They are append-o
 
 ## Status
 
-Draft. ADR-0001, ADR-0002, and ADR-0003 are `Accepted`. ADR-0002 authorizes the schema-first direction; ADR-0003 authorizes the independent Python F2 validator runtime. The decision-note directory preserves the initial `Request changes` review, frozen remediation response, and implementer hardening follow-up. F2 remains `In Review` pending eligible independent re-review. RFC remains a placeholder, and the proposed Foundation-RFC mechanism is not yet operational.
+Draft. ADR-0001 through ADR-0004 are `Accepted`. ADR-0002 authorizes the schema-first direction; ADR-0003 authorizes the independent Python F2 validator runtime; ADR-0004 selects a repository-wide Apache-2.0 license. The decision-note directory preserves the F2 review trail and the pending `v0.2.0-alpha.1` release-candidate decision. F2 remains `In Review` pending eligible independent re-review. RFC remains a placeholder, and the proposed Foundation-RFC mechanism is not yet operational.
