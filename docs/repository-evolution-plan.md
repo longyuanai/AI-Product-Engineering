@@ -1,9 +1,9 @@
 # Repository Evolution Plan
 
 - Status: Draft
-- Version: v0.4.3
+- Version: v0.4.4
 - Owner: APES Maintainers
-- Last Updated: 2026-08-19
+- Last Updated: 2026-08-27
 - Purpose: Define the long-term evolution path, reference architecture, and staged implementation strategy of the AI-Product-Engineering repository (and the family of research repositories that may inherit its standards). This document does **not** implement any component.
 
 > **Scope.** Foundation 0.1 architecture sprint, refined by Foundation 0.1.1 (architecture refinement sprint). No research modifications. No engine or prompt design. No directory implementation. No constitution. No standard. No workflow. This document is a planning artifact, not a release.
@@ -416,7 +416,7 @@ Foundation 0.1 raises questions that future Foundation sprints must answer. They
 - **OQ-8.** What is the protocol for "Research Gate `RESEARCH AGAIN`" if it persists past Foundation 1.0? Foundation 1.0 candidate.
 - **OQ-9.** Does a future family member have to write its own ADR-0001, or can it inherit the Foundation's positioning ADR? Foundation 0.5 candidate; the working assumption is "each project writes its own ADR-0001-equivalent."
 - **OQ-10.** Is the Foundation itself a GitHub organization, a branch, a tag, or a separate repository? Open. Default position: separate repository, future.
-- **OQ-11.** Should `Template` and `Checklist` become first-class artifact types in `schemas/artifact-metadata.schema.json`? Schema v0.2.0 has neither type, so lifecycle templates and stage-gate checklists currently fall back to `Workflow` with the `WORKFLOW-` prefix. This keeps artifacts schema-valid, but it erases the distinction between a reusable template, a review checklist, and a general workflow, and it prevents type-specific ID prefixes. Resolve this through a separately approved Schema compatibility change before metadata migration makes template or checklist identifiers normative, or earlier if a consumer must query or validate either kind independently. No RFC is opened while module standards remain Placeholder.
+- **OQ-11 — Resolved for review; maintainer acceptance pending.** Schema v0.3.0 adds `Template` / `TEMPLATE-` and `Checklist` / `CHECKLIST-`. Proposed [`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md) establishes that the schema currently governs parsed fixture objects rather than repository Markdown headers; Proposed [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md) carries the required standard-level compatibility change. Neither proposal authorizes metadata migration, and final acceptance belongs to `longyuan`.
 
 ## 16. Cross-References
 

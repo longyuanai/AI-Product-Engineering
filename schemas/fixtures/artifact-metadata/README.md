@@ -1,9 +1,9 @@
 # Artifact Metadata Fixtures
 
 - Status: Active
-- Version: v0.1
+- Version: v0.2
 - Owner: APES Maintainers
-- Last Updated: 2026-08-07
+- Last Updated: 2026-08-27
 - Purpose: Provide deterministic positive and negative cases for the F1 artifact metadata schema.
 
 ## Table of Contents
@@ -23,7 +23,8 @@
 | [`invalid/malformed-version.json`](invalid/malformed-version.json) | Invalid | Version is not Semantic Versioning syntax. |
 | [`invalid/type-id-mismatch.json`](invalid/type-id-mismatch.json) | Invalid | ADR type uses a `TASK-` identifier. |
 | [`invalid/unexpected-field.json`](invalid/unexpected-field.json) | Invalid | Undeclared `notes` field violates `additionalProperties: false`. |
+| [`invalid/unquoted-last-updated.yaml`](invalid/unquoted-last-updated.yaml) | Invalid | Unquoted YAML date becomes a date object instead of the required string. |
 
 ## Validation Rule
 
-A fixture pass means every file under `valid/` is accepted and every file under `invalid/` is rejected for at least one schema constraint. Negative fixtures are never counted as successful merely because a validator crashed or skipped them.
+A fixture pass means every machine-readable fixture under `valid/` is accepted and every machine-readable fixture under `invalid/` is rejected for at least one schema constraint. YAML fixtures are parsed before validation. Negative fixtures are never counted as successful merely because a validator crashed or skipped them.

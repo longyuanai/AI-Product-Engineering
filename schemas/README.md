@@ -1,9 +1,9 @@
 # schemas/
 
 - Status: Active
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-09
+- Last Updated: 2026-08-27
 - Purpose: Hold canonical, language-neutral contract prototypes for APES artifacts.
 
 ## Table of Contents
@@ -14,14 +14,16 @@
 
 ## Purpose
 
-Schemas make structural metadata reviewable before any engine or CLI is implemented. Human-readable Markdown remains canonical; a future YAML 1.2 front matter block is parsed into an object and validated against the applicable JSON Schema.
+Schemas make structural metadata reviewable without changing the repository's canonical Markdown. The current contract is a Foundation 0.3 / F1 prototype for parsed fixture objects; it does not assert that repository Markdown already contains YAML front matter.
 
 ## Current Contract
 
-- [`artifact-metadata.schema.json`](artifact-metadata.schema.json) — F1 common artifact metadata object, corrected to v0.2.0 during F2 independent review remediation so all thirteen artifact types have matching ID prefixes.
+- [`artifact-metadata.schema.json`](artifact-metadata.schema.json) — Schema v0.3.0 review candidate for the F1 common artifact metadata object, including first-class `Template` / `TEMPLATE-` and `Checklist` / `CHECKLIST-` pairs.
 - [`compatibility-mapping.md`](compatibility-mapping.md) — mapping from representative existing APES artifacts to the prototype.
-- [`fixtures/artifact-metadata/`](fixtures/artifact-metadata/README.md) — four valid and four intentionally invalid parsed-metadata fixtures.
+- [`fixtures/artifact-metadata/`](fixtures/artifact-metadata/README.md) — parsed-metadata fixtures, including an unquoted YAML date negative case.
 
 ## Boundary
 
-This directory contains contracts and fixtures, not executable tooling. Existing Markdown metadata is not bulk-migrated in F1. Validator CLI, graph, workflow, adapter, and release behavior remain later, separately approved phases.
+This directory contains contracts and fixtures, not executable tooling. [`artifact-metadata.schema.json`](artifact-metadata.schema.json) currently constrains only parsed metadata objects represented under [`fixtures/`](fixtures/artifact-metadata/README.md). It does not constrain the bullet-style metadata headers used by repository Markdown files, and P0-1 performs no front matter migration.
+
+[`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md) records this repository boundary as `Proposed`. [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md) separately proposes the standard-level taxonomy change; both await `longyuan`'s decision.

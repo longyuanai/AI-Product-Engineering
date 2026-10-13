@@ -1,9 +1,9 @@
 # templates/
 
 - Status: Active
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-19
+- Last Updated: 2026-08-27
 - Purpose: Hold reusable document templates for APES artifacts.
 
 ## Table of Contents
@@ -39,9 +39,9 @@ A completed working copy is project evidence only to the extent that its claims 
 
 ## Artifact Metadata Compatibility
 
-The templates correspond to [`artifact-metadata.schema.json`](../schemas/artifact-metadata.schema.json), Schema v0.2.0. That Schema does not yet define `Template` or `Checklist` types. Until the taxonomy is revised through an approved compatibility change, lifecycle templates and stage-gate checklists use the existing `Workflow` type and `WORKFLOW-` ID prefix.
+[`artifact-metadata.schema.json`](../schemas/artifact-metadata.schema.json), Schema v0.3.0, adds first-class `Template` / `TEMPLATE-` and `Checklist` / `CHECKLIST-` pairs. The standard-level change is proposed in [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md), and OQ-11 is recorded as resolved for this review candidate.
 
-This fallback keeps identifiers schema-valid but collapses distinct artifact kinds into one type. The open taxonomy decision, its cost, and its resolution trigger are recorded as OQ-11 in [`repository-evolution-plan.md`](../docs/repository-evolution-plan.md#15-open-questions).
+Per Proposed [`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md), those pairs currently govern parsed fixture objects only. They do not retroactively validate or rewrite the bullet-style headers or legacy Artifact Contract examples in canonical template Markdown. Both proposals await `longyuan`'s decision.
 
 ## Lifecycle Templates
 
@@ -57,4 +57,4 @@ This fallback keeps identifiers schema-valid but collapses distinct artifact kin
 
 ## Usage
 
-Copy the relevant template into the project's artifact location, replace instructional placeholders with project-specific content, assign a schema-valid `WORKFLOW-` identifier, and retain unsupported statements as hypotheses. A completed template is an input to the corresponding checklist under [`../checklists/`](../checklists/README.md); it is not evidence merely because its fields are filled in.
+Copy the relevant template into the project's artifact location, replace instructional placeholders with project-specific content, and retain unsupported statements as hypotheses. If the adopting project emits a Schema v0.3.0 parsed metadata object, use type `Template` and a `TEMPLATE-` identifier. A completed template is an input to the corresponding checklist under [`../checklists/`](../checklists/README.md); it is not evidence merely because its fields are filled in.

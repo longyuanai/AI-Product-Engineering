@@ -1,9 +1,9 @@
 # checklists/
 
 - Status: Active
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-19
+- Last Updated: 2026-08-27
 - Purpose: Hold quality and stage-gate checklists.
 
 ## Table of Contents
@@ -22,7 +22,7 @@ Checklists make stage gates and quality baselines concrete. They are the simples
 
 The nine lifecycle gates form a loop from Idea through Knowledge and back to Discovery. Each gate identifies its entry artifact, required evidence, failure record, and acceptable compensating evidence. A gate promise, unchecked box, or planned future activity is not evidence.
 
-Schema v0.2.0 has no `Checklist` type. The stage-gate checklists therefore use the documented `Workflow` / `WORKFLOW-` fallback in [`../templates/README.md`](../templates/README.md#artifact-metadata-compatibility) until OQ-11 is resolved.
+Schema v0.3.0 adds the first-class `Checklist` type with the `CHECKLIST-` ID prefix; [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md) carries the standard-level proposal, and OQ-11 is resolved for this review candidate. Proposed [`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md) limits that contract to parsed fixture objects, so P0-1 does not rewrite canonical checklist Markdown or its existing bullet-style metadata. Both proposals await `longyuan`'s decision.
 
 ## Canonical Working Copy Rule
 

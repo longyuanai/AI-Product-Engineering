@@ -1,9 +1,9 @@
 # standards/
 
-- Status: Placeholder
-- Version: v0.1
+- Status: Draft
+- Version: v0.2
 - Owner: APES Maintainers
-- Last Updated: 2026-08-19
+- Last Updated: 2026-08-25
 - Purpose: Hold the AI Product Engineering Standard itself, organized by lifecycle stage.
 
 ## Table of Contents
@@ -16,7 +16,9 @@
 
 ## Purpose
 
-This directory contains the actual APES standard. Each subdirectory corresponds to a lifecycle stage or to the repository itself. Subdirectories are placeholders in v0.1; the contents of each module standard are deliberately not yet written.
+This directory contains the actual APES standard. Each subdirectory corresponds to a lifecycle stage or to the repository itself.
+
+One module, [`research/`](research/README.md), now carries `Draft` standard text. Every other module remains a placeholder whose body is deliberately not yet written. Each module's own `Status` field is authoritative; this index does not restate it.
 
 ## Layout
 
@@ -50,8 +52,8 @@ A module standard is added through:
 
 ## Current Status
 
-As of v0.1:
+As of v0.2:
 
-- No module standard has been written.
-- This directory exists only to establish structure and to prevent future drift.
-- Each module's `README.md` only states its placeholder purpose.
+- [`research/`](research/README.md) is `Draft`. Its rules were extracted from this repository's own `research/` practice, not authored speculatively. No RFC has been raised to promote it beyond `Draft`, and it has not been validated against an external project.
+- The remaining eight modules are placeholders. No standard text has been written for them.
+- Because no module has been validated against a real case, no module is Accepted.

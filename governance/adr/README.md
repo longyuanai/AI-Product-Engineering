@@ -23,6 +23,7 @@ ADRs document significant architectural decisions that affect multiple parts of 
 - [`ADR-0002-schema-first-reference-architecture.md`](ADR-0002-schema-first-reference-architecture.md) — Accepted schema-first, file-native reference architecture and phased tooling boundary.
 - [`ADR-0003-f2-read-only-validator-runtime.md`](ADR-0003-f2-read-only-validator-runtime.md) — Accepted Python runtime, independent repository, deterministic CLI, and security boundary for F2.
 - [`ADR-0004-apache-2-0-repository-license.md`](ADR-0004-apache-2-0-repository-license.md) — Accepted repository-wide Apache-2.0 license boundary for repository-authored APES content.
+- [`ADR-0005-fixture-only-artifact-metadata-boundary.md`](ADR-0005-fixture-only-artifact-metadata-boundary.md) — Proposed fixture-only boundary for the F1 artifact metadata schema; maintainer decision pending.
 
 ## ADR Format
 

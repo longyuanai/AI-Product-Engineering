@@ -15,6 +15,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 No changes have been assigned beyond the alpha candidate.
 
+### Changed — P0-1 Schema Contract Alignment (2026-08-27)
+
+- Scoped the Foundation 0.3 / F1 artifact metadata schema to parsed objects under `schemas/fixtures/`; repository Markdown bullet-style metadata remains canonical and unmigrated.
+- Added Proposed ADR-0005 for the repository boundary and Proposed RFC-0001 for the standard-level compatibility change; final acceptance remains with `longyuan`.
+- Advanced the schema review candidate to v0.3.0 with `Template` / `TEMPLATE-` and `Checklist` / `CHECKLIST-`, resolving OQ-11 at review-candidate level.
+- Kept `last_updated` as a date-formatted string, required YAML producers to quote date-like scalars, and added an invalid unquoted-date YAML fixture.
+- Preserved Sprint 2 `In Review`, Research Gate `RESEARCH AGAIN`, F2 `In Review / Request changes`, F3 unstarted, the existing six-file P0-3 dirty tree, and the canonical release-readiness evidence record.
+- Added no runtime, CLI, MCP server, website, build pipeline, application code, production dependency, commit, branch, tag, or push.
+
 ## [0.2.0-alpha.1] - 2026-08-19
 
 ### Alpha Summary

@@ -60,3 +60,4 @@ Maintenance:
 - [`maintenance-2026-08-17-repository-contract-tests.md`](maintenance-2026-08-17-repository-contract-tests.md) — Repository contract tests and consistency fixes.
 - [`maintenance-2026-08-04-repository-hygiene.md`](maintenance-2026-08-04-repository-hygiene.md) — Repository index, link, and local-configuration hygiene.
 - [`maintenance-2026-08-07-project-reconciliation.md`](maintenance-2026-08-07-project-reconciliation.md) — Chat-to-repository reconciliation, project handoff, and Foundation 0.2 index sync.
+- [`maintenance-2026-08-27-p0-1-schema-contract-alignment.md`](maintenance-2026-08-27-p0-1-schema-contract-alignment.md) — Fixture-only F1 schema boundary, OQ-11 taxonomy proposal, and quoted YAML date contract.

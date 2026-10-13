@@ -1,9 +1,9 @@
 # Frequently Asked Questions
 
 - Status: Active
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-19
+- Last Updated: 2026-08-27
 - Purpose: Answer common questions about the APES alpha and its one-stage workflow.
 
 ## Table of Contents
@@ -71,4 +71,4 @@ No. F2 remains `In Review / Request changes` pending eligible independent re-rev
 
 ### Did the alpha resolve the template/checklist Schema type?
 
-No. OQ-11 remains unresolved. Templates and checklists retain the Schema v0.2.0 `Workflow` type and `WORKFLOW-` prefix.
+Yes, at the Schema review-candidate level. OQ-11 is resolved by Proposed [`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md) and [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md): Schema v0.3.0 adds `Template` / `TEMPLATE-` and `Checklist` / `CHECKLIST-`. The schema currently governs parsed fixtures only, no canonical Markdown header was migrated, and final acceptance remains with `longyuan`.

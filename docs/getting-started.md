@@ -70,7 +70,7 @@ Retain the APES candidate version and canonical source path in each working copy
 
 ## Run One Stage
 
-Use the canonical [`run-apes-stage`](../commands/run-apes-stage.md) instruction. Supply all required inputs and optionally list relevant Standard modules as context. Standard modules are placeholders in this alpha: they may provide orientation but do not define the artifact or override the selected template.
+Use the canonical [`run-apes-stage`](../commands/run-apes-stage.md) instruction. Supply all required inputs and optionally list relevant Standard modules as context. Only [`standards/research/`](../standards/research/README.md) carries standard text in this alpha, at `Draft`; the other eight modules are placeholders. Either way a module may provide orientation but does not define the artifact or override the selected template.
 
 You may pass the command to any capable coding agent, or use the [`Claude Code`](../examples/claude-code-apes.md) or [`Codex CLI`](../examples/codex-cli-apes.md) adaptation. Follow the adopting repository's own project instructions; APES's root `AGENTS.md` is maintainer policy for this repository, not a portable adopter requirement.
 

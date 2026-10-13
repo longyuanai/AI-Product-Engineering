@@ -1,23 +1,24 @@
 # Artifact Metadata Compatibility Mapping
 
 - Status: Active
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-09
+- Last Updated: 2026-08-27
 - Purpose: Show how representative existing APES artifacts map to the F1 metadata contract without rewriting or moving them.
 
 ## Table of Contents
 
 - [Compatibility Rule](#compatibility-rule)
 - [Representative Mapping](#representative-mapping)
+- [Type and ID Prefix Resolution](#type-and-id-prefix-resolution)
 - [Known Prototype Limits](#known-prototype-limits)
 - [Migration Boundary](#migration-boundary)
 
 ## Compatibility Rule
 
-The F1 schema validates the object produced after YAML front matter is parsed. JSON fixtures are used because JSON and parsed YAML share the same object model and JSON fixtures can be validated without changing canonical Markdown.
+The F1 schema validates parsed metadata objects represented by fixtures under [`fixtures/artifact-metadata/`](fixtures/artifact-metadata/README.md). JSON fixtures are used because JSON and parsed YAML share the same object model and can be validated without changing canonical Markdown.
 
-Existing bullet-style metadata headers remain readable and authoritative during F1. The fixture mapping demonstrates compatibility intent; it is not a bulk migration or a claim that every existing document already conforms.
+Existing bullet-style metadata headers remain readable and authoritative. The fixture mapping demonstrates compatibility intent only; it is not a bulk migration, a claim that repository Markdown contains YAML front matter, or a claim that existing files conform to the fixture-only contract. This boundary is proposed in [`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md).
 
 ## Representative Mapping
 
@@ -28,16 +29,27 @@ Existing bullet-style metadata headers remain readable and authoritative during 
 | [`../tasks/foundation-0-3-contract-prototype.md`](../tasks/foundation-0-3-contract-prototype.md) | [`fixtures/artifact-metadata/valid/task-foundation-0-3.json`](fixtures/artifact-metadata/valid/task-foundation-0-3.json) | Demonstrates task identity, dependencies, evidence, owner, and active lifecycle state. |
 | [`../tasks/sprint-03-1-coverage-audit.md`](../tasks/sprint-03-1-coverage-audit.md) | [`fixtures/artifact-metadata/valid/audit-sprint-03-1.json`](fixtures/artifact-metadata/valid/audit-sprint-03-1.json) | Represents the completed coverage audit as a typed Audit node. |
 
+## Type and ID Prefix Resolution
+
+Schema v0.3.0 adds the two first-class pairs proposed by [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md):
+
+| Artifact type | Required ID prefix |
+| --- | --- |
+| `Template` | `TEMPLATE-` |
+| `Checklist` | `CHECKLIST-` |
+
+These pairs apply to fixture objects validated by the schema. They do not retroactively rewrite or validate repository Markdown headers.
+
 ## Known Prototype Limits
 
-- The contract validates shape, local identifier syntax, and all thirteen type-to-ID-prefix rules; F2 resolves IDs across repository files.
+- The contract validates shape, local identifier syntax, and all fifteen type-to-ID-prefix rules; repository-aware resolution is outside this fixture-only contract.
 - JSON Schema validates semantic-version syntax but does not evaluate lifecycle transitions.
 - Evidence references are syntactically validated but not checked against Source Register rows.
-- Date format is declared as a JSON Schema string with `date` format. F2 normalizes a YAML date scalar such as unquoted `2026-08-09` to its ISO string before validation; JSON consumers continue to supply a string.
+- `last_updated` remains a JSON Schema string with `date` format. YAML producers must quote date-like values so a loader preserves the string type; [`invalid/unquoted-last-updated.yaml`](fixtures/artifact-metadata/invalid/unquoted-last-updated.yaml) records the rejected unquoted-scalar case.
 - Existing title-block metadata uses `Owner` while the prototype uses the normalized array field `owners`.
 
 Those repository-aware checks belong to F2 and are not implied by an F1 schema pass.
 
 ## Migration Boundary
 
-F1 moves no files and rewrites no existing header. A future migration requires a separately approved task, a compatibility report, dry-run output, and rollback paths. Removing the prototype leaves all current APES documents readable and authoritative.
+F1 and P0-1 move no files and rewrite no existing header. A future migration requires a separately approved task, an accepted decision, a compatibility report, dry-run output, and rollback paths. Removing the prototype leaves all current APES documents readable and authoritative.

@@ -38,7 +38,7 @@ AI Product Engineering Standard (APES) is a vendor-neutral, evidence-driven fram
 
 ## Current Status
 
-`v0.2.0-alpha.1` is a provisional **APES Project Layer** release candidate. It previews the v0.2 templates, manual stage gates, and tool guidance, but it is not final v0.2, a Foundation or Research OS version assignment, F5, a deterministic Release Layer bundle, a mature or externally validated methodology, or an industry standard. Standard module bodies remain placeholders, no external real-project case exists, and internal dogfood is not adoption evidence.
+`v0.2.0-alpha.1` is a provisional **APES Project Layer** release candidate. It previews the v0.2 templates, manual stage gates, and tool guidance, but it is not final v0.2, a Foundation or Research OS version assignment, F5, a deterministic Release Layer bundle, a mature or externally validated methodology, or an industry standard. One Standard module ([`standards/research/`](standards/research/README.md)) is `Draft` and the other eight bodies remain placeholders, no external real-project case exists, and internal dogfood is not adoption evidence.
 
 F2 remains `In Review / Request changes` pending eligible independent re-review; F3 has not started. Sprint 2 remains `In Review`, and the current Research Gate remains `RESEARCH AGAIN`. Historical Sprint 2.4 `READY FOR REVIEW` wording is preserved as that task's recommendation, not current release authority.
 

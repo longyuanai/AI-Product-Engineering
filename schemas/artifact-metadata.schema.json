@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:apes:schema:artifact-metadata:0.2.0",
+  "$id": "urn:apes:schema:artifact-metadata:0.3.0",
   "title": "APES Artifact Metadata Contract Prototype",
-  "description": "Foundation 0.3 / F1 contract for a parsed YAML front matter metadata object.",
+  "description": "Foundation 0.3 / F1 fixture-only demonstration contract for a parsed metadata object.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -32,6 +32,8 @@
         "RFC",
         "Standard",
         "Schema",
+        "Template",
+        "Checklist",
         "Workflow",
         "Task",
         "Audit",
@@ -75,6 +77,7 @@
       "$ref": "#/$defs/referenceList"
     },
     "last_updated": {
+      "description": "ISO 8601 full-date string. YAML producers MUST quote date-like scalars (for example, \"2026-08-27\") so parsers preserve the JSON Schema string type.",
       "type": "string",
       "format": "date"
     }
@@ -173,6 +176,26 @@
     {
       "properties": {
         "type": {
+          "const": "Template"
+        },
+        "id": {
+          "pattern": "^TEMPLATE-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Checklist"
+        },
+        "id": {
+          "pattern": "^CHECKLIST-"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
           "const": "Workflow"
         },
         "id": {
@@ -214,7 +237,7 @@
   "$defs": {
     "artifactId": {
       "type": "string",
-      "pattern": "^(ADR|RFC|SRC|EV|AUDIT|TASK|SCHEMA|WORKFLOW|STD|REL|RESEARCH|COVERAGE|GAP)-[A-Z0-9]+(?:-[A-Z0-9]+)*$"
+      "pattern": "^(ADR|RFC|SRC|EV|AUDIT|TASK|SCHEMA|TEMPLATE|CHECKLIST|WORKFLOW|STD|REL|RESEARCH|COVERAGE|GAP)-[A-Z0-9]+(?:-[A-Z0-9]+)*$"
     },
     "referenceList": {
       "type": "array",

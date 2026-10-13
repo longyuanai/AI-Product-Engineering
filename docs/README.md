@@ -28,4 +28,4 @@ Use [`getting-started.md`](getting-started.md) to run exactly one APES lifecycle
 
 ## Status
 
-The Getting Started path, stage gates, glossary, and FAQ are active for the provisional `v0.2.0-alpha.1` Project Layer candidate. This activation does not make placeholder Standard module bodies complete, approve F2, start F3, or provide external validation. Sprint 2 remains `In Review`; current Research Gate authority remains `RESEARCH AGAIN`.
+The Getting Started path, stage gates, glossary, and FAQ are active for the provisional `v0.2.0-alpha.1` Project Layer candidate. This activation does not complete the eight placeholder Standard module bodies, promote the `Draft` `standards/research/` module, approve F2, start F3, or provide external validation. Sprint 2 remains `In Review`; current Research Gate authority remains `RESEARCH AGAIN`.

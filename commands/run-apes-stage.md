@@ -32,7 +32,7 @@ Use this command to delegate exactly one APES lifecycle stage. It connects a can
 - `EXIT_GATE_CHECKLIST_PATH` — canonical APES checklist for the selected stage; read-only.
 - `GATE_RECORD_PATH` — project-owned checklist and Gate Record working copy to create or update under `PROJECT_WORK_ROOT`.
 - `GATE_DECISION_OWNER` — named human who alone records the final gate result.
-- `STANDARDS_CONTEXT_PATHS` — optional list of relevant context; placeholder Standard modules never define or override the output in this alpha.
+- `STANDARDS_CONTEXT_PATHS` — optional list of relevant context; a Standard module never defines or overrides the output in this alpha, whether its body is `Draft` or still a placeholder.
 
 Use the exact stage mappings in [`Getting Started`](../docs/getting-started.md#choose-one-stage) or [`Stage Gates`](../docs/stage-gates.md#gate-outputs).
 
@@ -129,7 +129,7 @@ Stop after the handoff. Do not begin the next stage.
 ## Anti-Patterns
 
 - Editing the APES source template or checklist during project execution.
-- Treating a placeholder Standard module as the artifact definition.
+- Treating any Standard module, placeholder or `Draft`, as the artifact definition.
 - Importing APES's repository-maintainer `AGENTS.md` as adopter policy.
 - Fabricating a citation, access date, interview, test result, or user observation.
 - Recording a final gate decision on behalf of the human owner.

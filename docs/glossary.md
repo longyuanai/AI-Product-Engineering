@@ -1,9 +1,9 @@
 # Glossary
 
 - Status: Active
-- Version: v0.2
+- Version: v0.3
 - Owner: APES Maintainers
-- Last Updated: 2026-08-19
+- Last Updated: 2026-08-27
 - Purpose: Define the terms required to run the APES alpha one-stage workflow consistently.
 
 ## Table of Contents
@@ -68,4 +68,4 @@ A project-owned copy of a canonical APES file. Project evidence and decisions ar
 
 ## Boundary
 
-The glossary defines the active alpha workflow only. OQ-11 remains unresolved, so templates and checklists continue to use the Schema v0.2.0 `Workflow` type and `WORKFLOW-` prefix.
+The glossary defines the active alpha workflow only. OQ-11 is resolved for the Schema v0.3.0 review candidate: parsed fixture objects use `Template` / `TEMPLATE-` and `Checklist` / `CHECKLIST-`. Proposed [`ADR-0005`](../governance/adr/ADR-0005-fixture-only-artifact-metadata-boundary.md) and [`RFC-0001`](../governance/rfc/RFC-0001-template-checklist-artifact-types.md) await `longyuan`'s decision and do not migrate canonical Markdown headers.
